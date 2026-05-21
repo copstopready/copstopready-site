@@ -141,19 +141,22 @@ body[data-nav-open="true"] { overflow: hidden; }
 html {
   background-color: var(--csr-bg);
   background-image:
-    /* Ambient red glow center-top (subtle vignette inverse). */
-    radial-gradient(ellipse 80% 60% at 50% 30%, transparent, transparent),
-    /* Vertical grid lines. */
+    /* gridMinor vertical (sub-squares). */
+    linear-gradient(to right, rgba(34, 197, 94, 0.04) 1px, transparent 1px),
+    /* gridMinor horizontal (sub-squares). */
+    linear-gradient(to bottom, rgba(34, 197, 94, 0.04) 1px, transparent 1px),
+    /* gridMajor vertical. */
     linear-gradient(to right, rgba(34, 197, 94, 0.12) 1px, transparent 1px),
-    /* Horizontal grid lines. */
+    /* gridMajor horizontal. */
     linear-gradient(to bottom, rgba(34, 197, 94, 0.12) 1px, transparent 1px);
   background-size:
-    100% 100%,
+    9px 9px,
+    9px 9px,
     36px 36px,
     36px 36px;
-  background-attachment: fixed, fixed, fixed;
-  background-position: center top, 0 0, 0 0;
-  background-repeat: no-repeat, repeat, repeat;
+  background-attachment: fixed, fixed, fixed, fixed;
+  background-position: 0 0, 0 0, 0 0, 0 0;
+  background-repeat: repeat, repeat, repeat, repeat;
 }
 
 /* Body inherits transparent so html grid shows through. */
@@ -165,7 +168,8 @@ body {
 @media (min-width: 768px) {
   html {
     background-size:
-      100% 100%,
+      12px 12px,
+      12px 12px,
       48px 48px,
       48px 48px;
   }
