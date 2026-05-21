@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CopStopReady FAQ. Common questions about recording police, privacy, Ticket Fighter, and how the app works.">
+  <title>FAQ - CopStopReady</title>
+  <link rel="stylesheet" href="/nav.css">
+  <script src="/nav.js" defer></script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      color: var(--csr-fg);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.65;
+    }
+    main {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 48px 20px 96px;
+    }
+    .page-header { text-align: center; margin-bottom: 48px; }
+    .page-header h1 {
+      font-size: 40px;
+      font-weight: 700;
+      letter-spacing: -1px;
+      margin-bottom: 12px;
+    }
+    .page-header h1 .accent { color: var(--csr-accent); }
+    .page-header p {
+      font-size: 16px;
+      color: var(--csr-fg-dim);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .qa {
+      background: rgba(0, 0, 0, 0.55);
+      border: 1px solid var(--csr-border);
+      border-left: 3px solid var(--csr-accent);
+      border-radius: 8px;
+      padding: 24px 24px;
+    }
+    .qa-question {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--csr-fg);
+      letter-spacing: -0.1px;
+      margin-bottom: 14px;
+    }
+    .qa-question .num {
+      display: inline-block;
+      color: var(--csr-accent);
+      font-weight: 700;
+      margin-right: 8px;
+    }
+    .qa p {
+      color: var(--csr-fg-dim);
+      font-size: 15px;
+      margin-bottom: 12px;
+    }
+    .qa p:last-child { margin-bottom: 0; }
+    .qa p strong { color: var(--csr-fg); font-weight: 600; }
+    .qa p.callout {
+      color: var(--csr-accent);
+      font-weight: 600;
+    }
+    .footer-nav {
+      margin-top: 56px;
+      padding-top: 24px;
+      border-top: 1px solid var(--csr-border);
+      font-size: 13px;
+      color: var(--csr-fg-mute);
+      text-align: center;
+    }
+    .footer-nav a {
+      color: var(--csr-fg-dim);
+      text-decoration: none;
+      margin: 0 14px;
+    }
+    .footer-nav a:hover { color: var(--csr-accent); }
+    @media (min-width: 768px) {
+      main { padding: 72px 24px 96px; }
+      .page-header h1 { font-size: 56px; }
+      .page-header p { font-size: 18px; }
+      .qa { padding: 28px 30px; }
+      .qa-question { font-size: 19px; }
+      .qa p { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <nav id="csr-nav"></nav>
+
+  <main>
+    <div class="page-header">
+      <h1><span class="accent">FAQ</span></h1>
+      <p>Real questions, straight answers. No fluff, no legalese hedging, no marketing-team approval needed.</p>
+    </div>
+
+    <div class="faq-list">
+
+      <div class="qa">
+        <div class="qa-question"><span class="num">01.</span>Is it legal to record the police?</div>
+        <p>Yes. In all 50 states, you have a constitutional right to record law enforcement officers performing their duties in public places where you have a lawful right to be. Some states have wiretap laws that complicate audio-only recording of private conversations — but a traffic stop on a public road is not a private conversation. CSR records audio by default because audio survives a phone being pointed at the floor or sitting on the passenger seat. <strong>Always tell the officer you are recording.</strong> It is your right, but it is also a courtesy that de-escalates the encounter.</p>
+      </div>
+
+      <div class="qa">
+        <div class="qa-question"><span class="num">02.</span>Does CSR work without internet?</div>
+        <p>Yes. After the initial install from Google Play, CSR does not need an internet connection to do its job. Recording, Vault playback, Doc Wallet, Ticket Fighter scans, the Rights Booklet, court letter generation — all of it runs entirely on your phone. The only thing that uses the network is OS-level push notifications and the Play Store updating the app itself.</p>
+        <p>You can verify this yourself: install CSR, turn on airplane mode, and use the app normally. It just works.</p>
+      </div>
+
+      <div class="qa">
+        <div class="qa-question"><span class="num">03.</span>Will the officer know I am recording?</div>
+        <p>Only if you tell them. CSR runs in the background the moment you tap the mic. Your screen can go dark, your phone can be in your pocket, and the recording keeps going. The recording survives the screen being locked, the app being swiped away, and low-battery conditions.</p>
+        <p>We recommend telling the officer you are recording anyway. It is your legal right, it de-escalates the encounter, and secret recording can create legal complications in some contexts. Telling them is the strongest legal posture.</p>
+      </div>
+
+      <div class="qa">
+        <div class="qa-question"><span class="num">04.</span>What happens to my recordings if I uninstall the app?</div>
+        <p>They are deleted with the app. CSR stores everything in the app’s private storage area, which Android wipes when you uninstall. This is part of the privacy architecture — nothing is left behind on the device, nothing was ever copied to a server.</p>
+        <p class="callout">If you need to keep a recording before uninstalling, share it out of the Vault to another app first (email it to yourself, send it to a cloud storage app of your choice, etc.).</p>
+      </div>
+
+      <div class="qa">
+        <div class="qa-question"><span class="num">05.</span>Does the $9.99 Ticket Fighter actually work?</div>
+        <p>It runs five analysis engines in parallel on every ticket. <strong>TimeEngine</strong> checks for timestamp inconsistencies between violation, citation, and court appearance. <strong>CourtEngine</strong> validates the listed venue against the citation jurisdiction. <strong>ContradictionEngine</strong> cross-references every extracted field against every other field for officer errors. <strong>EvidenceEngine</strong> identifies what the prosecution would need to prove and what the citation fails to supply. <strong>FusionEngine</strong> weighs all four passes and writes the court-ready letter calibrated to the strongest defense your specific ticket supports.</p>
+        <p>A traffic lawyer reads your ticket top-to-bottom once, one set of eyes, one pass, and charges $400 to produce essentially the same document. Same finding power. Same legal weight. 1/40th the price.</p>
+        <p class="callout">This is not your average hobbyist scanner. Built by the CSR team. Tested on real tickets. Tuned for court.</p>
+        <p>If you are not satisfied with your court outcome, email us within 60 days of court date for a full refund. No questions asked. Limit one refund per customer.</p>
+      </div>
+
+      <div class="qa">
+        <div class="qa-question"><span class="num">06.</span>What if my ticket is not from New Jersey?</div>
+        <p>v1.0 OCR is optimized for the New Jersey Uniform Traffic Ticket format. The scanner will attempt extraction on tickets from other states, but accuracy will be lower until we ship state-specific extractors. <strong>New York, Pennsylvania, and Connecticut are on the v1.1 roadmap</strong> with state-specific defense logic to follow.</p>
+        <p>If you got a ticket out of state and want to try the scanner anyway, the 60-day money-back guarantee still applies.</p>
+      </div>
+
+      <div class="qa">
+        <div class="qa-question"><span class="num">07.</span>Why no iPhone version?</div>
+        <p>v1.0 ships Android-only because shipping one platform well beats shipping two platforms badly. The iOS port is on the roadmap once Android validates the product in the wild and we have real user signal to build against.</p>
+        <p>If you have an iPhone, the best thing you can do is tell your Android friends about CSR and check back here in a few months.</p>
+      </div>
+
+      <div class="qa">
+        <div class="qa-question"><span class="num">08.</span>Who built this, and why should I trust you?</div>
+        <p>CopStopReady is built by a small team that believes Americans should not need a lawyer in the passenger seat to know what rights they carry as citizens. We have been on both sides of bad traffic stops, and we built the app we wished we had.</p>
+        <p>The trust mechanism is the architecture, not our promises. <strong>You do not have to trust the people who built CSR, because no data is being collected for us to misuse.</strong> No servers. No analytics. No accounts. No telemetry. Nothing leaves your phone. Ever.</p>
+        <p>Verify it yourself: install CSR, turn off your phone’s internet, and use the app. Then check your network traffic. There is no &ldquo;phone home&rdquo; because there is nowhere to phone home to.</p>
+      </div>
+
+    </div>
+
+    <div class="footer-nav">
+      <a href="/">Home</a>
+      <a href="/features/">Features</a>
+      <a href="/pricing/">Pricing</a>
+      <a href="/about/">About</a>
+      <a href="/privacy/">Privacy</a>
+      <a href="/contact/">Contact</a>
+    </div>
+  </main>
+</body>
+</html>
