@@ -142,7 +142,7 @@ html {
   background-color: var(--csr-bg);
   background-image:
     /* Ambient red glow center-top (subtle vignette inverse). */
-    radial-gradient(ellipse 80% 60% at 50% 30%, rgba(34, 197, 94, 0.08), transparent 70%),
+    radial-gradient(ellipse 80% 60% at 50% 30%, transparent, transparent),
     /* Vertical grid lines. */
     linear-gradient(to right, rgba(34, 197, 94, 0.12) 1px, transparent 1px),
     /* Horizontal grid lines. */
