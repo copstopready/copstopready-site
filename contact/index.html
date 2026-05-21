@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact CopStopReady support. Email us at support@copstopready.com.">
+  <title>Contact - CopStopReady</title>
+  <link rel="stylesheet" href="/nav.css">
+  <script src="/nav.js" defer></script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      color: var(--csr-fg);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+    }
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 48px 20px 96px;
+    }
+    .page-header { text-align: center; margin-bottom: 48px; }
+    .page-header h1 {
+      font-size: 40px;
+      font-weight: 700;
+      letter-spacing: -1px;
+      margin-bottom: 12px;
+    }
+    .page-header h1 .accent { color: var(--csr-accent); }
+    .page-header p {
+      font-size: 16px;
+      color: var(--csr-fg-dim);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .contact-card {
+      background: rgba(0, 0, 0, 0.55);
+      border: 2px solid var(--csr-accent);
+      border-radius: 10px;
+      padding: 40px 28px;
+      text-align: center;
+      box-shadow:
+        0 0 12px rgba(255, 0, 0, 0.35),
+        0 0 28px rgba(255, 0, 0, 0.18),
+        inset 0 0 18px rgba(255, 0, 0, 0.06);
+    }
+    .contact-card .label {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: var(--csr-accent);
+      margin-bottom: 16px;
+    }
+    .contact-card .email {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--csr-fg);
+      word-break: break-all;
+      margin-bottom: 24px;
+    }
+    .contact-card .email-btn {
+      display: inline-block;
+      background: var(--csr-accent);
+      color: #fff;
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: 0.3px;
+      padding: 14px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.15s ease, transform 0.05s ease;
+    }
+    .contact-card .email-btn:hover { background: var(--csr-accent-hover); }
+    .contact-card .email-btn:active { transform: translateY(1px); }
+    .info {
+      margin-top: 32px;
+      background: rgba(0, 0, 0, 0.55);
+      border: 1px solid var(--csr-border);
+      border-left: 3px solid var(--csr-accent);
+      border-radius: 8px;
+      padding: 24px 24px;
+    }
+    .info h2 {
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--csr-accent);
+      margin-bottom: 14px;
+    }
+    .info p {
+      color: var(--csr-fg-dim);
+      font-size: 15px;
+      margin-bottom: 12px;
+    }
+    .info p:last-child { margin-bottom: 0; }
+    .info p strong { color: var(--csr-fg); font-weight: 600; }
+    .footer-nav {
+      margin-top: 56px;
+      padding-top: 24px;
+      border-top: 1px solid var(--csr-border);
+      font-size: 13px;
+      color: var(--csr-fg-mute);
+      text-align: center;
+    }
+    .footer-nav a {
+      color: var(--csr-fg-dim);
+      text-decoration: none;
+      margin: 0 14px;
+    }
+    .footer-nav a:hover { color: var(--csr-accent); }
+    @media (min-width: 768px) {
+      main { padding: 72px 24px 96px; }
+      .page-header h1 { font-size: 56px; }
+      .page-header p { font-size: 18px; }
+      .contact-card { padding: 56px 40px; }
+      .contact-card .email { font-size: 28px; }
+      .info { padding: 28px 32px; }
+    }
+  </style>
+</head>
+<body>
+  <nav id="csr-nav"></nav>
+
+  <main>
+    <div class="page-header">
+      <h1><span class="accent">CONTACT</span></h1>
+      <p>One email. One human. No ticket queue, no chatbot, no auto-reply.</p>
+    </div>
+
+    <div class="contact-card">
+      <div class="label">Email Support</div>
+      <div class="email">support@copstopready.com</div>
+      <a href="mailto:support@copstopready.com?subject=CopStopReady%20Support" class="email-btn">Send Email</a>
+    </div>
+
+    <div class="info">
+      <h2>Before you write</h2>
+      <p><strong>Refunds:</strong> If you used Ticket Fighter and want your refund, mention your court date in the email. 60-day window from court date. Limit one per customer.</p>
+      <p><strong>Bug reports:</strong> Tell us your Android version and what you were doing when it broke. Screenshots welcome.</p>
+      <p><strong>Feature requests:</strong> Yes, we read these. No, we cannot promise we will build it. Tell us why it matters anyway.</p>
+      <p><strong>Legal:</strong> CopStopReady is not a law firm and does not provide legal advice. For your actual case, talk to a real lawyer.</p>
+    </div>
+
+    <div class="footer-nav">
+      <a href="/">Home</a>
+      <a href="/features/">Features</a>
+      <a href="/pricing/">Pricing</a>
+      <a href="/about/">About</a>
+      <a href="/privacy/">Privacy</a>
+    </div>
+  </main>
+</body>
+</html>
