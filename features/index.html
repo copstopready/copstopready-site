@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Everything CopStopReady does. Audio recording, Doc Wallet, Ticket Fighter, Rights Booklet, CSR Coach, and more.">
+  <title>Features - CopStopReady</title>
+  <link rel="stylesheet" href="/nav.css">
+  <script src="/nav.js" defer></script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      color: var(--csr-fg);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+    }
+    main {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 48px 20px 96px;
+    }
+    .page-header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+    .page-header h1 {
+      font-size: 40px;
+      font-weight: 700;
+      letter-spacing: -1px;
+      margin-bottom: 12px;
+    }
+    .page-header h1 .accent { color: var(--csr-accent); }
+    .page-header p {
+      font-size: 16px;
+      color: var(--csr-fg-dim);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .features-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .feature {
+      background: rgba(0, 0, 0, 0.55);
+      border: 1px solid var(--csr-border);
+      border-left: 3px solid var(--csr-accent);
+      border-radius: 8px;
+      padding: 24px 22px;
+      transition: border-color 0.2s ease, transform 0.1s ease;
+    }
+    .feature:hover {
+      border-color: var(--csr-accent);
+    }
+    .feature-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+    .feature-icon {
+      font-size: 26px;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+    .feature-name {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -0.1px;
+    }
+    .feature-price {
+      color: var(--csr-accent);
+      font-size: 14px;
+      font-weight: 600;
+      margin-left: 6px;
+    }
+    .feature p {
+      color: var(--csr-fg-dim);
+      font-size: 15px;
+    }
+    .feature p strong { color: var(--csr-fg); font-weight: 600; }
+    .cta-section {
+      margin-top: 56px;
+      text-align: center;
+      padding: 32px 20px;
+      background: rgba(0, 0, 0, 0.55);
+      border: 2px solid var(--csr-accent);
+      border-radius: 8px;
+      box-shadow:
+        0 0 12px rgba(255, 0, 0, 0.35),
+        0 0 28px rgba(255, 0, 0, 0.18);
+    }
+    .cta-section p {
+      font-size: 15px;
+      color: var(--csr-fg-dim);
+      margin-bottom: 14px;
+    }
+    .cta-section .cta-headline {
+      color: var(--csr-accent);
+      font-weight: 700;
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+    .cta-section .cta-status {
+      font-size: 13px;
+      color: var(--csr-fg-mute);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-top: 16px;
+    }
+    .footer-nav {
+      margin-top: 64px;
+      padding-top: 24px;
+      border-top: 1px solid var(--csr-border);
+      font-size: 13px;
+      color: var(--csr-fg-mute);
+      text-align: center;
+    }
+    .footer-nav a {
+      color: var(--csr-fg-dim);
+      text-decoration: none;
+      margin: 0 14px;
+    }
+    .footer-nav a:hover { color: var(--csr-accent); }
+    @media (min-width: 768px) {
+      main { padding: 72px 24px 96px; }
+      .page-header h1 { font-size: 56px; }
+      .page-header p { font-size: 18px; }
+      .feature { padding: 28px 28px; }
+      .feature-name { font-size: 19px; }
+    }
+  </style>
+</head>
+<body>
+  <nav id="csr-nav"></nav>
+
+  <main>
+    <div class="page-header">
+      <h1><span class="accent">FEATURES</span></h1>
+      <p>Everything CopStopReady does for you. On your phone. No servers. No accounts. No analytics.</p>
+    </div>
+
+    <div class="features-list">
+
+      <div class="feature">
+        <div class="feature-head">
+          <div class="feature-icon">🎙️</div>
+          <div class="feature-name">Audio Recording</div>
+        </div>
+        <p>Tap the mic. Capture starts immediately. Survives lock screen, force-close, and low battery. Every recording is <strong>auto-titled with the GPS location and timestamp</strong> the moment it begins, so the court-grade evidence is ready before the encounter even ends.</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-head">
+          <div class="feature-icon">🗂️</div>
+          <div class="feature-name">Vault</div>
+        </div>
+        <p>Every recording stored locally on your device. PIN-locked. Auto-named by location and time so you can find the one you need without scrolling through dozens of files called "audio_001.m4a". Example: <strong>"Stop on Raritan Avenue, May 21, 3:06pm"</strong>. Browse, play back, share with your lawyer.</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-head">
+          <div class="feature-icon">📇</div>
+          <div class="feature-name">Doc Wallet</div>
+        </div>
+        <p>Your license, registration, and insurance photos in one place. PIN-locked. <strong>Single-document mode</strong> lets you hand the phone to the officer showing ONLY what they asked for, without unlocking the rest of your phone or exposing other documents.</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-head">
+          <div class="feature-icon">⚖️</div>
+          <div class="feature-name">Ticket Fighter<span class="feature-price">$9.99</span></div>
+        </div>
+        <p>Take a photo of your ticket. We extract the statute, violation, fine, court date, and officer info, then generate a <strong>court-ready letter</strong> that finds the same procedural holes a traffic lawyer would charge $400 to identify. <strong>60-day money-back guarantee</strong> if you are not satisfied with your court outcome. Limit one refund per customer.</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-head">
+          <div class="feature-icon">📖</div>
+          <div class="feature-name">Rights Booklet</div>
+        </div>
+        <p>Every protection you have during a traffic stop, written in plain English. <strong>Short, clear, no legal jargon.</strong> Two taps from anywhere in the app. Know what you can refuse, what you must comply with, and where the constitutional line sits — before the officer is at your window.</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-head">
+          <div class="feature-icon">🚨</div>
+          <div class="feature-name">CSR Coach</div>
+        </div>
+        <p>In-the-moment guidance during an active stop. Step-by-step reminders for what to say and not say, what to hand over and what to keep, when to invoke your rights and how. <strong>Designed to be glanceable</strong> while your hands are on the wheel.</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-head">
+          <div class="feature-icon">🔒</div>
+          <div class="feature-name">4-Digit PIN Lock</div>
+        </div>
+        <p>Vault and Doc Wallet are locked behind a 4-digit PIN. If your phone is taken or grabbed, the officer cannot browse your recordings or documents without your authorization. <strong>Hardware-backed encryption</strong> on the device.</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-head">
+          <div class="feature-icon">🛰️</div>
+          <div class="feature-name">GPS Location Stamp</div>
+        </div>
+        <p>Every audio recording is automatically stamped with the exact GPS coordinates of where it started AND where it stopped, embedded directly in the local metadata file. Documents <strong>WHERE the encounter happened</strong> for court evidence and complaint filings. Stays on your device. Never transmitted.</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-head">
+          <div class="feature-icon">🔔</div>
+          <div class="feature-name">Smart Notifications</div>
+        </div>
+        <p>Local push reminders for document expirations (license, registration, insurance) and upcoming court dates. Everything is scheduled <strong>on your device locally</strong> — no server connection required, no data sent to anyone, no third-party reminder service.</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-head">
+          <div class="feature-icon">🌌</div>
+          <div class="feature-name">No Servers. No Analytics. No Telemetry.</div>
+        </div>
+        <p>This is not a marketing line. It is an architecture decision. <strong>There is no cloud account</strong>. There is no backend. There is no analytics pipeline. CopStopReady cannot leak what does not exist on a server. Cannot be subpoenaed for data it does not have. Cannot sell what it never collected.</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-head">
+          <div class="feature-icon">🌙</div>
+          <div class="feature-name">Moon Mode</div>
+        </div>
+        <p>Tactical, night-ops dark theme. Pure black background with glowing green grid lines designed to be <strong>readable in low light</strong> without blinding you at 2am on the shoulder of a dark road. Built for the actual conditions you will use this app in.</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-head">
+          <div class="feature-icon">🇺🇸</div>
+          <div class="feature-name">Built for the Constitution</div>
+        </div>
+        <p>Rooted in the <strong>4th and 5th Amendments</strong>. CopStopReady is not a legal service and does not give legal advice — it is a tool that helps you exercise rights you already have, made by people who believe you should not need a lawyer in the car to know what protections you carry as a U.S. citizen.</p>
+      </div>
+
+    </div>
+
+    <div class="cta-section">
+      <div class="cta-headline">All of this. Free to use.</div>
+      <p>Ticket Fighter is the only paid feature at $9.99 per scan with a 60-day money-back guarantee. Everything else is free, forever.</p>
+      <div class="cta-status">Coming Soon to Google Play</div>
+    </div>
+
+    <div class="footer-nav">
+      <a href="/">Home</a>
+      <a href="/privacy/">Privacy</a>
+      <a href="/contact/">Contact</a>
+    </div>
+  </main>
+</body>
+</html>
