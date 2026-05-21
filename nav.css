@@ -142,11 +142,11 @@ html {
   background-color: var(--csr-bg);
   background-image:
     /* Ambient red glow center-top (subtle vignette inverse). */
-    radial-gradient(ellipse 80% 60% at 50% 30%, rgba(229, 57, 53, 0.18), transparent 70%),
+    radial-gradient(ellipse 80% 60% at 50% 30%, rgba(34, 197, 94, 0.18), transparent 70%),
     /* Vertical grid lines. */
-    linear-gradient(to right, rgba(229, 57, 53, 0.22) 1px, transparent 1px),
+    linear-gradient(to right, rgba(34, 197, 94, 0.22) 1px, transparent 1px),
     /* Horizontal grid lines. */
-    linear-gradient(to bottom, rgba(229, 57, 53, 0.22) 1px, transparent 1px);
+    linear-gradient(to bottom, rgba(34, 197, 94, 0.22) 1px, transparent 1px);
   background-size:
     100% 100%,
     36px 36px,
