@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CopStopReady pricing: $9.99 Ticket Fighter with court-ready letter. 60-day money-back guarantee. Everything else free.">
+  <title>Pricing - CopStopReady</title>
+  <link rel="stylesheet" href="/nav.css">
+  <script src="/nav.js" defer></script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      color: var(--csr-fg);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+    }
+    main {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 48px 20px 96px;
+    }
+    .page-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .page-header h1 {
+      font-size: 40px;
+      font-weight: 700;
+      letter-spacing: -1px;
+      margin-bottom: 12px;
+    }
+    .page-header h1 .accent { color: var(--csr-accent); }
+    .page-header p {
+      font-size: 16px;
+      color: var(--csr-fg-dim);
+      max-width: 620px;
+      margin: 0 auto;
+    }
+    .tiers {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-bottom: 56px;
+    }
+    .tier {
+      background: rgba(0, 0, 0, 0.55);
+      border-radius: 10px;
+      padding: 32px 26px;
+    }
+    .tier-free {
+      border: 1px solid var(--csr-border);
+    }
+    .tier-paid {
+      border: 2px solid var(--csr-accent);
+      box-shadow:
+        0 0 12px rgba(255, 0, 0, 0.35),
+        0 0 28px rgba(255, 0, 0, 0.18),
+        inset 0 0 18px rgba(255, 0, 0, 0.06);
+    }
+    .tier-label {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: var(--csr-fg-mute);
+      margin-bottom: 12px;
+    }
+    .tier-paid .tier-label { color: var(--csr-accent); }
+    .tier-name {
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: -0.4px;
+      margin-bottom: 4px;
+    }
+    .tier-price {
+      font-size: 44px;
+      font-weight: 800;
+      color: var(--csr-accent);
+      letter-spacing: -1.5px;
+      line-height: 1;
+      margin: 8px 0 6px;
+    }
+    .tier-price .per { font-size: 16px; font-weight: 600; color: var(--csr-fg-dim); margin-left: 6px; letter-spacing: 0; }
+    .tier-free .tier-price { color: var(--csr-fg); }
+    .tier-subtitle {
+      font-size: 15px;
+      color: var(--csr-fg-dim);
+      margin-bottom: 22px;
+    }
+    .tier ul {
+      list-style: none;
+      margin: 0;
+    }
+    .tier ul li {
+      font-size: 15px;
+      color: var(--csr-fg);
+      padding-left: 24px;
+      position: relative;
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+    .tier ul li::before {
+      content: "✓";
+      color: var(--csr-accent);
+      position: absolute;
+      left: 0;
+      font-weight: 700;
+    }
+    .deep-dive {
+      margin-top: 64px;
+      padding: 32px 26px;
+      background: rgba(0, 0, 0, 0.55);
+      border: 1px solid var(--csr-border);
+      border-left: 3px solid var(--csr-accent);
+      border-radius: 8px;
+    }
+    .deep-dive h2 {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+      margin-bottom: 18px;
+    }
+    .deep-dive h2 .accent { color: var(--csr-accent); }
+    .deep-dive h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--csr-accent);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-top: 28px;
+      margin-bottom: 12px;
+    }
+    .deep-dive p {
+      color: var(--csr-fg-dim);
+      font-size: 15px;
+      margin-bottom: 14px;
+    }
+    .deep-dive p strong { color: var(--csr-fg); font-weight: 600; }
+    .compare-row {
+      display: flex;
+      gap: 14px;
+      margin: 22px 0;
+      flex-wrap: wrap;
+    }
+    .compare-card {
+      flex: 1 1 220px;
+      background: #0a0a0a;
+      border: 1px solid var(--csr-border);
+      border-radius: 6px;
+      padding: 18px 16px;
+    }
+    .compare-card .label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--csr-fg-mute);
+      margin-bottom: 6px;
+    }
+    .compare-card .price {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -1px;
+      margin-bottom: 4px;
+    }
+    .compare-card .price.legal { color: var(--csr-fg); }
+    .compare-card .price.csr { color: var(--csr-accent); }
+    .compare-card .detail {
+      font-size: 13px;
+      color: var(--csr-fg-dim);
+    }
+    .guarantee {
+      margin-top: 32px;
+      padding: 20px 22px;
+      background: rgba(0, 0, 0, 0.55);
+      border: 2px solid var(--csr-accent);
+      border-radius: 8px;
+      box-shadow:
+        0 0 12px rgba(255, 0, 0, 0.35),
+        0 0 28px rgba(255, 0, 0, 0.18);
+    }
+    .guarantee .stamp {
+      color: var(--csr-accent);
+      font-weight: 700;
+      font-size: 17px;
+      margin-bottom: 6px;
+    }
+    .guarantee p {
+      color: var(--csr-fg-dim);
+      font-size: 14px;
+    }
+    .footer-nav {
+      margin-top: 64px;
+      padding-top: 24px;
+      border-top: 1px solid var(--csr-border);
+      font-size: 13px;
+      color: var(--csr-fg-mute);
+      text-align: center;
+    }
+    .footer-nav a {
+      color: var(--csr-fg-dim);
+      text-decoration: none;
+      margin: 0 14px;
+    }
+    .footer-nav a:hover { color: var(--csr-accent); }
+    @media (min-width: 768px) {
+      main { padding: 72px 24px 96px; }
+      .page-header h1 { font-size: 56px; }
+      .page-header p { font-size: 18px; }
+      .tiers { flex-direction: row; }
+      .tier { flex: 1; }
+      .deep-dive { padding: 40px 36px; }
+      .deep-dive h2 { font-size: 30px; }
+    }
+  </style>
+</head>
+<body>
+  <nav id="csr-nav"></nav>
+
+  <main>
+    <div class="page-header">
+      <h1><span class="accent">PRICING</span></h1>
+      <p>One paid feature. Everything else is free, forever. No subscription, no monthly fee, no surprise charges.</p>
+    </div>
+
+    <div class="tiers">
+
+      <div class="tier tier-free">
+        <div class="tier-label">Free Forever</div>
+        <div class="tier-name">Everything Else</div>
+        <div class="tier-price">$0</div>
+        <div class="tier-subtitle">No account. No subscription. No catch.</div>
+        <ul>
+          <li>Audio recording with auto-titled GPS metadata</li>
+          <li>Vault — unlimited local recording storage</li>
+          <li>Doc Wallet for license, registration, insurance</li>
+          <li>Full Rights Booklet, all sections</li>
+          <li>CSR Coach in-the-moment guidance</li>
+          <li>4-digit PIN lock on Vault and Wallet</li>
+          <li>Smart push notifications for doc expiry and court dates</li>
+          <li>Moon Mode tactical theme</li>
+        </ul>
+      </div>
+
+      <div class="tier tier-paid">
+        <div class="tier-label">Premium Scan</div>
+        <div class="tier-name">Ticket Fighter</div>
+        <div class="tier-price">$9.99<span class="per">/ scan</span></div>
+        <div class="tier-subtitle">Pay only when you actually get a ticket. No subscription.</div>
+        <ul>
+          <li>Multi-engine scanner extracts every field on your ticket</li>
+          <li>Detects contradictions, evidentiary gaps, and procedural defects</li>
+          <li>Generates a court-ready letter sized to your specific ticket</li>
+          <li>Beatability score across structural, evidentiary, and plea-path angles</li>
+          <li>60-day money-back guarantee if you are not satisfied</li>
+          <li>Limit one refund per customer</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="deep-dive">
+      <h2>Why <span class="accent">$9.99</span> beats a $400 lawyer letter</h2>
+
+      <p>Traffic attorneys charge <strong>$400 to $600</strong> just to write the same kind of letter our scanner generates in 30 seconds — and most of that time is the lawyer reading your ticket and typing the same boilerplate they have typed a thousand times before. We automated the part they were already automating in their heads.</p>
+
+      <div class="compare-row">
+        <div class="compare-card">
+          <div class="label">Traffic Attorney</div>
+          <div class="price legal">$400+</div>
+          <div class="detail">Per letter. Hours to schedule. Days to receive.</div>
+        </div>
+        <div class="compare-card">
+          <div class="label">CopStopReady</div>
+          <div class="price csr">$9.99</div>
+          <div class="detail">Per scan. 30 seconds. Court-ready PDF on your phone.</div>
+        </div>
+      </div>
+
+      <h3>What the scanner actually does</h3>
+      <p>Ticket Fighter is not a simple OCR tool that reads text. It is a <strong>multi-engine analysis pipeline</strong> built from the ground up to find the same procedural cracks a good defense attorney looks for in a ticket. You take one photo. We do five passes simultaneously:</p>
+
+      <p><strong>1. OCR extraction.</strong> Statute code, violation, ticket number, defendant info, officer badge, fine amount, location, plate, court date — all pulled off your physical citation.</p>
+
+      <p><strong>2. Time analysis.</strong> The TimeEngine cross-checks the violation timestamp, the court time, and the issued time for inconsistencies that defense lawyers routinely use to challenge admissibility.</p>
+
+      <p><strong>3. Court verification.</strong> The CourtEngine validates the listed municipal court against the citation jurisdiction and flags mismatches that void venue.</p>
+
+      <p><strong>4. Contradiction detection.</strong> The ContradictionEngine cross-references every extracted field against every other field to catch the kind of officer errors — wrong vehicle, mismatched statute and violation, internally inconsistent fines — that get cases dismissed when raised properly.</p>
+
+      <p><strong>5. Evidentiary gap analysis.</strong> The EvidenceEngine identifies what the prosecution would need to prove to convict, and what is missing from the citation that they cannot supply later.</p>
+
+      <p>The FusionEngine then weighs all five passes and generates a <strong>court-ready letter</strong> calibrated to the strongest defense your specific ticket supports — not a generic template, an actual argument built around the specific holes our pipeline found.</p>
+
+      <h3>Why we can charge $9.99</h3>
+      <p>Because we do not run servers. Because we do not pay a lawyer per scan. Because we built the analysis engine ourselves and the marginal cost of one more scan is essentially zero. We could charge $99. We charge $9.99 because <strong>the law should not only be enforceable by people who can afford a lawyer</strong>.</p>
+
+      <div class="guarantee">
+        <div class="stamp">60-Day Money-Back Guarantee</div>
+        <p>If you are not satisfied with your court outcome, email <strong>support@copstopready.com</strong> within 60 days of your court date for a full refund. No questions asked. No documentation required. Limit one refund per customer.</p>
+      </div>
+    </div>
+
+    <div class="footer-nav">
+      <a href="/">Home</a>
+      <a href="/features/">Features</a>
+      <a href="/privacy/">Privacy</a>
+      <a href="/contact/">Contact</a>
+    </div>
+  </main>
+</body>
+</html>
