@@ -32,7 +32,13 @@
       line-height: 1.1;
     }
     .brand .copstop { color: #fff; }
-    .brand .ready { color: #e53935; }
+    .brand .ready {
+      color: var(--csr-accent);
+      text-shadow:
+        0 0 8px rgba(255, 0, 0, 0.55),
+        0 0 20px rgba(255, 0, 0, 0.30),
+        0 0 40px rgba(239, 68, 68, 0.18);
+    }
     .tagline {
       font-size: 18px;
       color: #aaa;
@@ -57,7 +63,7 @@
       border: 1px solid #222;
       border-radius: 8px;
     }
-    .promise strong { color: #e53935; }
+    .promise strong { color: var(--csr-accent); }
     .links {
       display: flex;
       gap: 24px;
@@ -73,7 +79,7 @@
       border-radius: 4px;
       transition: border-color 0.2s, color 0.2s;
     }
-    .links a:hover { border-color: #e53935; color: #e53935; }
+    .links a:hover { border-color: var(--csr-accent); color: var(--csr-accent); }
     footer {
       margin-top: 64px;
       font-size: 12px;
