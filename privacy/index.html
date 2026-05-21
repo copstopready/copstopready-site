@@ -102,7 +102,7 @@
   <div class="container">
     <div class="brand"><a href="/"><span class="copstop">COPSTOP</span><span class="ready">READY</span></a></div>
     <h1>Privacy Policy</h1>
-    <div class="effective">Effective May 19, 2026</div>
+    <div class="effective">Effective May 21, 2026</div>
 
     <div class="intro">
       CopStopReady is built privacy-first. We do not run servers. We do not collect user data. We do not run analytics. We do not have crash reporting. Nothing about your use of this app leaves your phone.
@@ -111,10 +111,10 @@
     <h2>What stays on your phone (always)</h2>
     <ul>
       <li>Your driver license, registration, and insurance card photos</li>
-      <li>All audio and video recordings made during encounters</li>
+      <li>All audio recordings made during encounters</li>
+      <li>GPS coordinates of where each recording started and stopped (stored inside the recording metadata file, never transmitted)</li>
       <li>Your PIN (encrypted in your phone hardware-backed secure storage)</li>
       <li>Your scanned tickets and generated court letters</li>
-      <li>Your emergency contacts</li>
       <li>App settings and preferences</li>
     </ul>
     <p>There is no server. There is no cloud account. There is nothing to leak, subpoena, or sell.</p>
@@ -122,27 +122,26 @@
     <h2>What we do not collect</h2>
     <ul>
       <li>Your name, address, or identifying information</li>
-      <li>Your location (no GPS tracking, no location history)</li>
       <li>Your contacts list</li>
       <li>Analytics, telemetry, or usage statistics</li>
       <li>Crash reports or error logs</li>
       <li>Anything you do inside the app</li>
     </ul>
 
-    <h2>CSR Plus SMS upgrade</h2>
-    <p>CSR Plus ($1.99/month) messages are composed on your device and sent through your phone's native SMS system. They do not pass through our servers because we do not have any.</p>
+    <h2>Location (GPS)</h2>
+    <p>Each audio recording is stamped with GPS coordinates at the moment recording starts and stops, embedded in the recording's local metadata file. This documents WHERE the encounter happened &mdash; critical evidence if your recording is ever used in court or as a complaint. The coordinates stay on your phone with the recording. We never see them. We have no servers. If you deny the location permission, recordings still save with the coordinates blank.</p>
 
     <h2>Push notifications</h2>
     <p>Push notifications for document expiry and court dates are scheduled locally on your device. They do not require a server connection.</p>
 
     <h2>Purchases</h2>
-    <p>Ticket Fighter purchases ($9.99 per scan) and CSR Plus subscriptions are processed by the Google Play Store or Apple App Store. We receive purchase confirmation only - never your payment details.</p>
+    <p>Ticket Fighter Premium Scan ($9.99 per scan) is the only paid feature in v1.0. Purchases are processed by the Google Play Store. We receive purchase confirmation only &mdash; never your payment details.</p>
 
     <h2>What we will never do</h2>
     <ul>
       <li>Sell your data to anyone</li>
       <li>Share your data with law enforcement</li>
-      <li>Access your recordings, documents, or contacts remotely</li>
+      <li>Access your recordings, documents, or coordinates remotely</li>
       <li>Send your data to advertisers</li>
       <li>Add analytics or tracking in a future update without an opt-in prompt and a Privacy Policy update first</li>
     </ul>
