@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="CopStopReady pricing: $9.99 Ticket Fighter with court-ready letter. 60-day money-back guarantee. Everything else free.">
+  <meta name="description" content="CopStopReady is free today. Ticket Fighter and Text Reminders are paid features coming in a future update.">
   <title>Pricing - CopStopReady</title>
   <link rel="stylesheet" href="/nav.css">
   <script src="/nav.js" defer></script>
@@ -106,6 +106,18 @@
       position: absolute;
       left: 0;
       font-weight: 700;
+    }
+    .coming-pill {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--csr-accent);
+      border: 1px solid var(--csr-accent);
+      border-radius: 4px;
+      padding: 3px 8px;
+      margin-bottom: 12px;
     }
     .deep-dive {
       margin-top: 64px;
@@ -221,29 +233,29 @@
   <main>
     <div class="page-header">
       <h1><span class="accent">PRICING</span></h1>
-      <p>One paid feature. Everything else is free, forever. No subscription, no monthly fee, no surprise charges.</p>
+      <p>Right now, CopStopReady is completely free. Two paid features are coming in a future update &mdash; Ticket Fighter ($9.99/scan) and Text Reminders ($1.99/mo). Until then, everything is free.</p>
     </div>
 
     <div class="tiers">
 
       <div class="tier tier-free">
-        <div class="tier-label">Free Forever</div>
-        <div class="tier-name">Everything Else</div>
+        <div class="tier-label">Free Today</div>
+        <div class="tier-name">The Whole App</div>
         <div class="tier-price">$0</div>
-        <div class="tier-subtitle">No account. No subscription. No catch.</div>
+        <div class="tier-subtitle">No account. Everything below is free right now.</div>
         <ul>
           <li>Audio recording with auto-titled GPS metadata</li>
-          <li>Vault — unlimited local recording storage</li>
+          <li>Vault &mdash; unlimited local recording storage</li>
           <li>Doc Wallet for license, registration, insurance</li>
           <li>Full Rights Booklet, all sections</li>
           <li>CSR Coach in-the-moment guidance</li>
           <li>4-digit PIN lock on Vault and Wallet</li>
-          <li>Smart push notifications for doc expiry and court dates</li>
           <li>Moon Mode tactical theme</li>
         </ul>
       </div>
 
       <div class="tier tier-paid">
+        <div class="coming-pill">Coming Soon</div>
         <div class="tier-label">Premium Scan</div>
         <div class="tier-name">Ticket Fighter</div>
         <div class="tier-price">$9.99<span class="per">/ scan</span></div>
@@ -261,9 +273,11 @@
     </div>
 
     <div class="deep-dive">
-      <h2>Why <span class="accent">$9.99</span> beats a $400 lawyer letter</h2>
+      <h2>Why <span class="accent">$9.99</span> will beat a $400 lawyer letter</h2>
 
-      <p>Traffic attorneys charge <strong>$400 to $600</strong> just to write the same kind of letter our scanner generates in 30 seconds — and most of that time is the lawyer reading your ticket and typing the same boilerplate they have typed a thousand times before. We automated the part they were already automating in their heads.</p>
+      <p><strong>Ticket Fighter is a paid feature coming in a future update.</strong> When it launches, here is what you get for $9.99 instead of $400.</p>
+
+      <p>Traffic attorneys charge <strong>$400 to $600</strong> just to write the same kind of letter our scanner generates in 30 seconds &mdash; and most of that time is the lawyer reading your ticket and typing the same boilerplate they have typed a thousand times before. We automated the part they were already automating in their heads.</p>
 
       <div class="compare-row">
         <div class="compare-card">
@@ -281,24 +295,24 @@
       <h3>What the scanner actually does</h3>
       <p>Ticket Fighter is not a simple OCR tool that reads text. It is a <strong>multi-engine analysis pipeline</strong> built from the ground up to find the same procedural cracks a good defense attorney looks for in a ticket. You take one photo. We do five passes simultaneously:</p>
 
-      <p><strong>1. OCR extraction.</strong> Statute code, violation, ticket number, defendant info, officer badge, fine amount, location, plate, court date — all pulled off your physical citation.</p>
+      <p><strong>1. OCR extraction.</strong> Statute code, violation, ticket number, defendant info, officer badge, fine amount, location, plate, court date &mdash; all pulled off your physical citation.</p>
 
       <p><strong>2. Time analysis.</strong> The TimeEngine cross-checks the violation timestamp, the court time, and the issued time for inconsistencies that defense lawyers routinely use to challenge admissibility.</p>
 
       <p><strong>3. Court verification.</strong> The CourtEngine validates the listed municipal court against the citation jurisdiction and flags mismatches that void venue.</p>
 
-      <p><strong>4. Contradiction detection.</strong> The ContradictionEngine cross-references every extracted field against every other field to catch the kind of officer errors — wrong vehicle, mismatched statute and violation, internally inconsistent fines — that get cases dismissed when raised properly.</p>
+      <p><strong>4. Contradiction detection.</strong> The ContradictionEngine cross-references every extracted field against every other field to catch the kind of officer errors &mdash; wrong vehicle, mismatched statute and violation, internally inconsistent fines &mdash; that get cases dismissed when raised properly.</p>
 
       <p><strong>5. Evidentiary gap analysis.</strong> The EvidenceEngine identifies what the prosecution would need to prove to convict, and what is missing from the citation that they cannot supply later.</p>
 
-      <p>The FusionEngine then weighs all five passes and generates a <strong>court-ready letter</strong> calibrated to the strongest defense your specific ticket supports — not a generic template, an actual argument built around the specific holes our pipeline found.</p>
+      <p>The FusionEngine then weighs all five passes and generates a <strong>court-ready letter</strong> calibrated to the strongest defense your specific ticket supports &mdash; not a generic template, an actual argument built around the specific holes our pipeline found.</p>
 
       <h3>Why we can charge $9.99</h3>
       <p>Because we do not run servers. Because we do not pay a lawyer per scan. Because we built the analysis engine ourselves and the marginal cost of one more scan is essentially zero. We could charge $99. We charge $9.99 because <strong>the law should not only be enforceable by people who can afford a lawyer</strong>.</p>
 
       <div class="guarantee">
         <div class="stamp">60-Day Money-Back Guarantee</div>
-        <p>If you are not satisfied with your court outcome, email <strong>support@copstopready.com</strong> within 60 days of your court date for a full refund. No questions asked. No documentation required. Limit one refund per customer.</p>
+        <p>When Ticket Fighter launches: if you are not satisfied with your court outcome, email <strong>support@copstopready.com</strong> within 60 days of your court date for a full refund. No questions asked. No documentation required. Limit one refund per customer.</p>
       </div>
     </div>
 
