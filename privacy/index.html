@@ -10,16 +10,23 @@
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html, body {
-      background: #000;
       color: #fff;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       -webkit-font-smoothing: antialiased;
       line-height: 1.6;
     }
+    .glowfield {
+      position: fixed; inset: 0; z-index: -1; pointer-events: none;
+      background:
+        radial-gradient(55% 40% at 50% -5%, rgba(255,0,0,.16), transparent 60%),
+        radial-gradient(45% 40% at 100% 0%, rgba(34,197,94,.08), transparent 60%);
+    }
     .container {
       max-width: 720px;
       margin: 0 auto;
       padding: 48px 24px 96px;
+      background: rgba(0, 0, 0, 0.55);
+      border-radius: 12px;
     }
     .brand {
       font-size: 28px;
@@ -28,7 +35,7 @@
       margin-bottom: 8px;
     }
     .brand .copstop { color: #fff; }
-    .brand .ready { color: #e53935; }
+    .brand .ready { color: var(--csr-accent); }
     .brand a { text-decoration: none; }
     h1 {
       font-size: 32px;
@@ -48,13 +55,13 @@
       color: #fff;
       margin-bottom: 32px;
       padding: 20px;
-      border-left: 3px solid #e53935;
+      border-left: 3px solid var(--csr-accent);
       background: #0a0a0a;
     }
     h2 {
       font-size: 18px;
       font-weight: 700;
-      color: #e53935;
+      color: var(--csr-accent);
       text-transform: uppercase;
       letter-spacing: 1px;
       margin-top: 36px;
@@ -78,13 +85,13 @@
     }
     ul li::before {
       content: "\2022";
-      color: #e53935;
+      color: var(--csr-accent);
       position: absolute;
       left: 0;
       font-weight: 700;
     }
-    a { color: #e53935; }
-    a:hover { color: #ff5247; }
+    a { color: var(--csr-accent); }
+    a:hover { color: var(--csr-accent-hover); }
     .footer-nav {
       margin-top: 64px;
       padding-top: 24px;
@@ -101,11 +108,12 @@
   </style>
 </head>
 <body>
+  <div class="glowfield"></div>
   <nav id="csr-nav"></nav>
   <div class="container">
     <div class="brand"><a href="/"><span class="copstop">COPSTOP</span><span class="ready">READY</span></a></div>
     <h1>Privacy Policy</h1>
-    <div class="effective">Effective May 21, 2026</div>
+    <div class="effective">Effective July 21, 2026</div>
 
     <div class="intro">
       CopStopReady is built privacy-first. We do not run servers. We do not collect user data. We do not run analytics. We do not have crash reporting. Nothing about your use of this app leaves your phone.
@@ -134,11 +142,11 @@
     <h2>Location (GPS)</h2>
     <p>Each audio recording is stamped with GPS coordinates at the moment recording starts and stops, embedded in the recording's local metadata file. This documents WHERE the encounter happened &mdash; critical evidence if your recording is ever used in court or as a complaint. The coordinates stay on your phone with the recording. We never see them. We have no servers. If you deny the location permission, recordings still save with the coordinates blank.</p>
 
-    <h2>Push notifications</h2>
-    <p>Push notifications for document expiry and court dates are scheduled locally on your device. They do not require a server connection.</p>
+    <h2>Reminders &amp; notifications</h2>
+    <p>Document-expiry and court-date reminders are scheduled locally on your device. They do not require a server connection, and nothing is sent to us. Text (SMS) reminders are an optional paid feature planned for a future update; only if you choose to turn them on would a reminder ever be delivered to you by text.</p>
 
     <h2>Purchases</h2>
-    <p>CopStopReady has two paid features. Ticket Fighter costs $9.99 per scan. Text Reminders is an optional subscription, free for your first 90 days and $1.99 per month after that. Both are processed by the Google Play Store. We receive purchase confirmation only &mdash; never your payment details.</p>
+    <p>CopStopReady is free to use today &mdash; billing is not active yet. Two paid features are planned for a future update: Ticket Fighter ($9.99 per scan) and Text Reminders ($1.99 per month). When they become available, both are processed by the Google Play Store, and we receive purchase confirmation only &mdash; never your payment details.</p>
 
     <h2>What we will never do</h2>
     <ul>

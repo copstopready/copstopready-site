@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Know your rights during a traffic stop — plain English. Your right to remain silent, to refuse a search, and to record. Plus the Rights Booklet, Book of Secrets, and Quick Tips inside CopStopReady.">
+  <title>Rights - CopStopReady</title>
+  <link rel="stylesheet" href="/nav.css">
+  <script src="/nav.js" defer></script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      color: var(--csr-fg);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+    }
+    main { max-width: 880px; margin: 0 auto; padding: 48px 20px 96px; }
+
+    .page-header { text-align: center; margin-bottom: 44px; }
+    .page-header h1 { font-size: 40px; font-weight: 800; letter-spacing: -1px; margin-bottom: 12px; }
+    .page-header h1 .accent { color: var(--csr-accent); }
+    .page-header p { font-size: 16px; color: var(--csr-fg-dim); max-width: 620px; margin: 0 auto; }
+
+    /* prominent not-legal-advice banner */
+    .legal-banner {
+      display: flex; gap: 12px; align-items: flex-start;
+      background: rgba(0,0,0,0.55); border: 1px solid var(--csr-border);
+      border-left: 3px solid #ffd60a; border-radius: 8px; padding: 16px 18px; margin-bottom: 40px;
+      font-size: 13.5px; color: var(--csr-fg-dim);
+    }
+    .legal-banner b { color: #ffd60a; }
+
+    .section-kicker {
+      color: var(--csr-accent); font-weight: 800; letter-spacing: 2px; text-transform: uppercase;
+      font-size: 12px; margin: 0 0 16px;
+    }
+
+    /* amendment rights cards */
+    .rights-list { display: flex; flex-direction: column; gap: 16px; margin-bottom: 48px; }
+    .right {
+      background: rgba(0,0,0,0.55); border: 1px solid var(--csr-border);
+      border-left: 3px solid var(--accent, var(--csr-accent)); border-radius: 8px; padding: 24px 22px;
+    }
+    .right .amd {
+      display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase;
+      color: var(--accent, var(--csr-accent)); border: 1px solid var(--accent, var(--csr-accent));
+      border-radius: 4px; padding: 3px 9px; margin-bottom: 12px;
+    }
+    .right h3 { font-size: 20px; font-weight: 800; letter-spacing: -0.2px; margin-bottom: 8px; }
+    .right p { color: var(--csr-fg-dim); font-size: 15px; margin-bottom: 12px; }
+    .right p:last-child { margin-bottom: 0; }
+    .right p strong { color: var(--csr-fg); font-weight: 600; }
+    .say {
+      display: block; background: #0a0c0a; border: 1px solid var(--csr-border); border-radius: 8px;
+      padding: 14px 16px; color: #fff; font-size: 15px; font-weight: 600; margin-top: 6px;
+    }
+    .say .lbl { display: block; color: var(--csr-fg-mute); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 6px; }
+    .r-5th { --accent: #FF0000; }
+    .r-4th { --accent: #22c55e; }
+    .r-1st { --accent: #ffd60a; }
+    .r-docs { --accent: #9aa39a; }
+
+    /* library tiers */
+    .lib { display: grid; grid-template-columns: 1fr; gap: 16px; margin-bottom: 48px; }
+    .lib-card {
+      background: rgba(0,0,0,0.55); border: 1px solid var(--csr-border); border-radius: 10px; padding: 24px 22px;
+    }
+    .lib-card .h { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+    .lib-card .h .ic { font-size: 24px; line-height: 1; }
+    .lib-card h3 { font-size: 18px; font-weight: 800; letter-spacing: -0.2px; }
+    .lib-card .badge { font-size: 11px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; color: #22c55e; margin-left: auto; }
+    .lib-card p { color: var(--csr-fg-dim); font-size: 15px; }
+
+    .cta-section {
+      margin-top: 8px; text-align: center; padding: 32px 20px;
+      background: rgba(0,0,0,0.55); border: 2px solid var(--csr-accent); border-radius: 8px;
+      box-shadow: 0 0 12px rgba(255,0,0,0.35), 0 0 28px rgba(255,0,0,0.18);
+    }
+    .cta-section .cta-headline { color: var(--csr-accent); font-weight: 800; font-size: 18px; margin-bottom: 8px; }
+    .cta-section p { font-size: 15px; color: var(--csr-fg-dim); }
+    .cta-section .cta-status { font-size: 13px; color: var(--csr-fg-mute); text-transform: uppercase; letter-spacing: 2px; margin-top: 16px; }
+
+    .footer-nav { margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--csr-border); font-size: 13px; color: var(--csr-fg-mute); text-align: center; }
+    .footer-nav a { color: var(--csr-fg-dim); text-decoration: none; margin: 0 14px; }
+    .footer-nav a:hover { color: var(--csr-accent); }
+
+    @media (min-width: 768px) {
+      main { padding: 72px 24px 96px; }
+      .page-header h1 { font-size: 56px; }
+      .page-header p { font-size: 18px; }
+      .right { padding: 28px 28px; }
+      .right h3 { font-size: 22px; }
+      .lib { grid-template-columns: repeat(3, 1fr); }
+    }
+  </style>
+</head>
+<body>
+  <nav id="csr-nav"></nav>
+
+  <main>
+    <div class="page-header">
+      <h1><span class="accent">KNOW YOUR</span> RIGHTS</h1>
+      <p>The line between what you must do and what you can refuse during a traffic stop &mdash; in plain English, before the officer is at your window.</p>
+    </div>
+
+    <div class="legal-banner">
+      <span>⚠️</span>
+      <div><b>This is general information, not legal advice.</b> Laws vary by state and every situation is different. CopStopReady helps you exercise rights you already have &mdash; it is not a lawyer. For anything serious, consult a licensed attorney.</div>
+    </div>
+
+    <p class="section-kicker">The three that matter most</p>
+    <div class="rights-list">
+
+      <div class="right r-5th">
+        <span class="amd">5th Amendment</span>
+        <h3>The right to remain silent</h3>
+        <p>You do not have to answer questions like &ldquo;do you know why I stopped you?&rdquo; or &ldquo;where are you coming from?&rdquo; Anything you say can be used against you &mdash; and you can decline politely without it being an admission of anything.</p>
+        <span class="say"><span class="lbl">CopStopReady coaches you to say</span>&ldquo;I am pleading the 5th and invoking my right to remain silent.&rdquo;</span>
+      </div>
+
+      <div class="right r-4th">
+        <span class="amd">4th Amendment</span>
+        <h3>The right to refuse a search</h3>
+        <p>An officer may ask to search your car. Unless they have probable cause or a warrant, <strong>you can decline consent</strong>. Refusing a search is not an admission of guilt, and stating it clearly protects you later in court.</p>
+        <span class="say"><span class="lbl">CopStopReady coaches you to say</span>&ldquo;I do not consent to any searches.&rdquo;</span>
+      </div>
+
+      <div class="right r-1st">
+        <span class="amd">1st Amendment</span>
+        <h3>The right to record</h3>
+        <p>In all 50 states you have the right to record law enforcement performing their duties in public. CopStopReady records to a locked, on-device vault the moment you tap the mic &mdash; even with the screen off. <strong>Telling the officer you are recording</strong> is your right and it tends to de-escalate the encounter.</p>
+      </div>
+
+      <div class="right r-docs">
+        <span class="amd">What you provide</span>
+        <h3>License, registration &amp; insurance</h3>
+        <p>When you are driving, an officer can generally ask for your license, registration, and proof of insurance. CopStopReady's <strong>Doc Wallet</strong> keeps all three on-device and PIN-locked, so you can show what's asked for without unlocking the rest of your phone.</p>
+      </div>
+
+    </div>
+
+    <p class="section-kicker">Inside the app: the Rights library</p>
+    <div class="lib">
+      <div class="lib-card">
+        <div class="h"><span class="ic">📖</span><h3>Rights Booklet</h3><span class="badge">Free</span></div>
+        <p>Every protection you carry during a stop, written plainly &mdash; what you can refuse, what you must comply with, and where the constitutional line sits. Two taps from anywhere in the app.</p>
+      </div>
+      <div class="lib-card">
+        <div class="h"><span class="ic">🔑</span><h3>Book of Secrets</h3><span class="badge">Free</span></div>
+        <p>The deeper, read-at-home guide &mdash; the details and nuances most people never learn until they're standing on the shoulder wishing they had.</p>
+      </div>
+      <div class="lib-card">
+        <div class="h"><span class="ic">⚡</span><h3>Quick Tips</h3><span class="badge">Free</span></div>
+        <p>Fast, roadside answers built for the moment the clock is running. Short, glanceable, and to the point when you don't have time to read.</p>
+      </div>
+    </div>
+
+    <p class="section-kicker">In the moment</p>
+    <div class="right" style="--accent: var(--csr-accent); margin-bottom: 48px;">
+      <h3>The CSR Coach walks you through it live</h3>
+      <p>Knowing your rights and remembering them with a badge at your window are two different things. The <strong>Traffic-Stop Coach</strong> gives step-by-step, glanceable guidance during an active stop &mdash; what to say, what to hand over, when to stay silent &mdash; and the <strong>Court Day Coach</strong> preps you for the hearing afterward.</p>
+    </div>
+
+    <div class="cta-section">
+      <div class="cta-headline">Carry your rights in your pocket.</div>
+      <p>The entire Rights library is free. CopStopReady is in closed testing on Google Play now &mdash; public launch is coming.</p>
+      <div class="cta-status">Coming soon to Google Play</div>
+    </div>
+
+    <div class="footer-nav">
+      <a href="/">Home</a>
+      <a href="/features/">Features</a>
+      <a href="/pricing/">Pricing</a>
+      <a href="/privacy/">Privacy</a>
+      <a href="/contact/">Contact</a>
+    </div>
+  </main>
+</body>
+</html>

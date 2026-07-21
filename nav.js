@@ -6,6 +6,7 @@
   var NAV_LINKS = [
     { href: '/',         label: 'Home' },
     { href: '/features/', label: 'Features' },
+    { href: '/rights/',   label: 'Rights' },
     { href: '/pricing/',  label: 'Pricing' },
     { href: '/faq/',      label: 'FAQ' },
     { href: '/about/',    label: 'About' },
