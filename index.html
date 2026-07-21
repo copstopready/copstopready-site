@@ -116,8 +116,9 @@
     .more:hover { border-color: var(--csr-accent); color: var(--csr-accent); }
 
     /* SHOTS */
-    .shots { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; align-items: start; }
-    @media (max-width: 820px) { .shots { grid-template-columns: 1fr; max-width: 340px; margin: 0 auto; } }
+    .shots { display: grid; grid-template-columns: repeat(4,1fr); gap: 18px; align-items: start; }
+    @media (max-width: 900px) { .shots { grid-template-columns: 1fr 1fr; max-width: 620px; margin: 0 auto; } }
+    @media (max-width: 520px) { .shots { grid-template-columns: 1fr; max-width: 320px; } }
     .shot { background: linear-gradient(#141714,#0a0c0a); border: 1px solid #232a23; border-radius: 22px; padding: 8px; }
     .shot img { width: 100%; height: auto; display: block; border-radius: 16px; }
     .shot span { display: block; text-align: center; color: var(--csr-fg-dim); font-size: 13.5px; font-weight: 600; padding: 12px 6px 6px; }
@@ -265,6 +266,7 @@
         <div class="shot"><img src="/img/live_recording.jpg" alt="Live recording script" width="560" height="1213"><span>Live recording &mdash; say this</span></div>
         <div class="shot"><img src="/img/ticket_result.jpg" alt="Ticket scan review" width="560" height="1213"><span>Ticket scan &mdash; every field checked</span></div>
         <div class="shot"><img src="/img/court_letter.jpg" alt="Court-ready letter" width="560" height="1213"><span>Court-ready letter, generated</span></div>
+        <div class="shot"><img src="/img/truecost_result.jpg" alt="True cost of a ticket" width="560" height="1213"><span>True cost &mdash; fine + points + insurance</span></div>
       </div>
     </div>
   </section>
