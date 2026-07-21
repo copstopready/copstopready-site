@@ -6,8 +6,15 @@ Hosted on GitHub Pages. Custom domain: [copstopready.com](https://copstopready.c
 
 ## Pages
 
-- `/` — Landing page (coming soon)
+- `/` — Landing page
+- `/features/` — Features
+- `/rights/` — Know Your Rights
+- `/pricing/` — Pricing
+- `/faq/` — FAQ
+- `/about/` — About
 - `/privacy/` — Privacy Policy (required for Google Play Store submission)
+- `/terms/` — Terms of Use
+- `/contact/` — Contact
 
 ## Editing
 
