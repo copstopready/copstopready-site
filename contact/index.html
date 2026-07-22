@@ -15,6 +15,12 @@
       -webkit-font-smoothing: antialiased;
       line-height: 1.6;
     }
+    .glowfield {
+      position: fixed; inset: 0; z-index: -1; pointer-events: none;
+      background:
+        radial-gradient(55% 40% at 50% -5%, rgba(255,0,0,.16), transparent 60%),
+        radial-gradient(45% 40% at 100% 0%, rgba(34,197,94,.08), transparent 60%);
+    }
     main {
       max-width: 720px;
       margin: 0 auto;
@@ -120,8 +126,23 @@
       .info { padding: 28px 32px; }
     }
   </style>
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="CopStopReady">
+  <meta property="og:title" content="Contact - CopStopReady">
+  <meta property="og:description" content="Contact CopStopReady support. Email us at support@copstopready.com.">
+  <meta property="og:url" content="https://copstopready.com/contact/">
+  <meta property="og:image" content="https://copstopready.com/img/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact - CopStopReady">
+  <meta name="twitter:description" content="Contact CopStopReady support. Email us at support@copstopready.com.">
+  <meta name="twitter:image" content="https://copstopready.com/img/og.jpg">
 </head>
 <body>
+  <div class="glowfield"></div>
   <nav id="csr-nav"></nav>
 
   <main>
