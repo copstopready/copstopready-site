@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="How to use CopStopReady: a simple six-step walk-through, from the moment you're pulled over to the day you walk into court.">
+  <title>How to Use - CopStopReady</title>
+  <link rel="stylesheet" href="/nav.css">
+  <script src="/nav.js" defer></script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      color: var(--csr-fg);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+    }
+    main { max-width: 820px; margin: 0 auto; padding: 48px 20px 96px; }
+    .page-header { text-align: center; margin-bottom: 40px; }
+    .page-header h1 { font-size: 40px; font-weight: 800; letter-spacing: -1px; margin-bottom: 12px; }
+    .page-header h1 .accent { color: var(--csr-accent); }
+    .page-header p { font-size: 16px; color: var(--csr-fg-dim); max-width: 600px; margin: 0 auto; }
+    .steps { display: flex; flex-direction: column; gap: 16px; margin-bottom: 44px; }
+    .step {
+      display: flex; gap: 18px; align-items: flex-start;
+      background: rgba(0,0,0,0.55); border: 1px solid var(--csr-border);
+      border-left: 3px solid var(--accent, var(--csr-accent)); border-radius: 10px;
+      padding: 22px 22px;
+    }
+    .step .num {
+      flex: 0 0 auto; width: 40px; height: 40px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; font-weight: 800; color: #fff;
+      background: var(--accent, var(--csr-accent));
+      box-shadow: 0 0 14px rgba(0,0,0,0.45);
+    }
+    .step .body { flex: 1 1 auto; }
+    .step h3 { font-size: 18px; font-weight: 800; letter-spacing: -0.2px; margin-bottom: 6px; }
+    .step p { color: var(--csr-fg-dim); font-size: 15px; }
+    .step p strong { color: var(--csr-fg); font-weight: 600; }
+    .s1 { --accent: #FF0000; }
+    .s2 { --accent: #22c55e; }
+    .s3 { --accent: #ffd60a; }
+    .s4 { --accent: #f0a000; }
+    .s5 { --accent: #22c55e; }
+    .s6 { --accent: #FF0000; }
+    .s3 .num, .s4 .num { color: #111; }
+    .cta-section {
+      margin-top: 8px; text-align: center; padding: 32px 20px;
+      background: rgba(0,0,0,0.55); border: 2px solid var(--csr-accent); border-radius: 8px;
+      box-shadow: 0 0 12px rgba(255,0,0,0.35), 0 0 28px rgba(255,0,0,0.18);
+    }
+    .cta-section .cta-headline { color: var(--csr-accent); font-weight: 800; font-size: 18px; margin-bottom: 8px; }
+    .cta-section p { font-size: 15px; color: var(--csr-fg-dim); }
+    .cta-section .cta-status { font-size: 13px; color: var(--csr-fg-mute); text-transform: uppercase; letter-spacing: 2px; margin-top: 16px; }
+    .footer-nav { margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--csr-border); font-size: 13px; color: var(--csr-fg-mute); text-align: center; }
+    .footer-nav a { color: var(--csr-fg-dim); text-decoration: none; margin: 0 14px; }
+    .footer-nav a:hover { color: var(--csr-accent); }
+    @media (min-width: 768px) {
+      main { padding: 72px 24px 96px; }
+      .page-header h1 { font-size: 56px; }
+      .page-header p { font-size: 18px; }
+      .step { padding: 26px 28px; }
+      .step h3 { font-size: 20px; }
+    }
+  </style>
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="CopStopReady">
+  <meta property="og:title" content="How to Use - CopStopReady">
+  <meta property="og:description" content="CopStopReady in six simple steps, from the moment you're pulled over to the day you walk into court.">
+  <meta property="og:url" content="https://copstopready.com/how-to-use/">
+  <meta property="og:image" content="https://copstopready.com/img/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How to Use - CopStopReady">
+  <meta name="twitter:description" content="CopStopReady in six simple steps, from pulled over to court day.">
+  <meta name="twitter:image" content="https://copstopready.com/img/og.jpg">
+</head>
+<body>
+  <nav id="csr-nav"></nav>
+  <main>
+    <div class="page-header">
+      <h1><span class="accent">HOW</span> TO USE</h1>
+      <p>CopStopReady in six simple steps &mdash; from the moment you're pulled over to the day you walk into court.</p>
+    </div>
+    <div class="steps">
+      <div class="step s1">
+        <div class="num">1</div>
+        <div class="body">
+          <h3>Pulled over? Tap the mic.</h3>
+          <p>Open CopStopReady and tap the red mic the second you're stopped. It records straight to a locked, on-device vault &mdash; your screen can be off and the phone in your lap.</p>
+        </div>
+      </div>
+      <div class="step s2">
+        <div class="num">2</div>
+        <div class="body">
+          <h3>Let the Coach talk you through it.</h3>
+          <p>The CSR Coach gives you glanceable, step-by-step guidance during the stop &mdash; what to say, what you can politely refuse, and when to stay silent.</p>
+        </div>
+      </div>
+      <div class="step s3">
+        <div class="num">3</div>
+        <div class="body">
+          <h3>Know your rights cold.</h3>
+          <p>Two taps to the Rights tab: your 5th, 4th, and 1st Amendment protections in plain English, plus the full Rights Booklet.</p>
+        </div>
+      </div>
+      <div class="step s4">
+        <div class="num">4</div>
+        <div class="body">
+          <h3>Got a ticket? Scan it.</h3>
+          <p>Tap <strong>Scan Traffic Ticket</strong> and CopStopReady reads it, then builds a court-ready letter and a step-by-step prep guide &mdash; the kind of work that runs $400+ with a lawyer.</p>
+        </div>
+      </div>
+      <div class="step s5">
+        <div class="num">5</div>
+        <div class="body">
+          <h3>Keep your docs handy.</h3>
+          <p>Doc Wallet stores your license, registration, and insurance on your phone as your &ldquo;forgot my wallet&rdquo; backup, and reminds you before any of them expire.</p>
+        </div>
+      </div>
+      <div class="step s6">
+        <div class="num">6</div>
+        <div class="body">
+          <h3>Show up ready for court.</h3>
+          <p>The Court Day Coach preps you for the hearing, and a court-date warning fires on its own as the date gets close &mdash; so it never sneaks up on you.</p>
+        </div>
+      </div>
+    </div>
+    <div class="cta-section">
+      <div class="cta-headline">That's the whole app.</div>
+      <p>No account, no cloud, nothing to set up &mdash; open it and go. CopStopReady is in closed testing on Google Play now, and public launch is coming.</p>
+      <div class="cta-status">Coming soon to Google Play</div>
+    </div>
+    <div class="footer-nav">
+      <a href="/">Home</a>
+      <a href="/features/">Features</a>
+      <a href="/rights/">Rights</a>
+      <a href="/pricing/">Pricing</a>
+      <a href="/contact/">Contact</a>
+    </div>
+  </main>
+</body>
+</html>
