@@ -83,6 +83,9 @@ body { padding-top: var(--csr-nav-height); }
   left: 0;
   right: 0;
   bottom: 0;
+  /* Explicit height: #csr-nav's backdrop-filter makes it the containing block
+     for this fixed drawer, so bottom:0 alone collapses it. */
+  height: calc(100vh - var(--csr-nav-height));
   background: var(--csr-bg);
   display: flex;
   flex-direction: column;
@@ -107,12 +110,25 @@ body { padding-top: var(--csr-nav-height); }
 .csr-nav-link:hover { color: var(--csr-accent); }
 .csr-nav-link[aria-current="page"] { color: var(--csr-accent); }
 
+/* Share button in the nav */
+.csr-nav-share {
+  background: var(--csr-accent);
+  color: var(--csr-fg);
+  border: 0;
+  cursor: pointer;
+  font-weight: 700;
+  border-radius: 6px;
+  font-family: inherit;
+}
+.csr-nav-share:hover { background: var(--csr-accent-hover); color: var(--csr-fg); }
+
 /* Desktop nav: horizontal inline links. */
 @media (min-width: 768px) {
   .csr-nav-toggle { display: none; }
   .csr-nav-menu {
     position: static;
     transform: none;
+    height: auto;
     flex-direction: row;
     background: transparent;
     padding: 0;
