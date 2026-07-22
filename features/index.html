@@ -51,8 +51,22 @@
       background: linear-gradient(#141714, #0a0c0a); border: 1px solid #232a23;
       border-radius: 18px; padding: 6px;
     }
-    .shots .shot img { width: 100%; display: block; border-radius: 13px; }
+    .shots .shot img { width: 100%; height: auto; display: block; border-radius: 13px; }
     @media (max-width: 560px) { .shots { grid-template-columns: 1fr 1fr; } }
+    .showcase {
+      display: grid; grid-template-columns: 300px 1fr; gap: 32px; align-items: center;
+      background: rgba(0,0,0,.55); border: 1px solid var(--csr-border); border-left: 3px solid #ffd60a;
+      border-radius: 12px; padding: 28px; margin-bottom: 44px;
+    }
+    .showcase .sc-phone { background: linear-gradient(#141714,#0a0c0a); border: 1px solid #232a23; border-radius: 20px; padding: 7px; }
+    .showcase .sc-phone img { width: 100%; height: auto; display: block; border-radius: 14px; }
+    .showcase h2 { font-size: 24px; font-weight: 800; margin-bottom: 12px; letter-spacing: -0.3px; }
+    .showcase h2 .accent { color: #ffd60a; }
+    .showcase p { color: var(--csr-fg-dim); font-size: 15.5px; margin-bottom: 12px; }
+    .showcase p:last-child { margin-bottom: 0; }
+    .showcase p strong { color: var(--csr-fg); font-weight: 600; }
+    .showcase .big { color: #ffd60a; font-weight: 800; }
+    @media (max-width: 640px) { .showcase { grid-template-columns: 1fr; text-align: center; padding: 24px; } .showcase .sc-phone { max-width: 250px; margin: 0 auto; } }
     .features-list {
       display: flex;
       flex-direction: column;
@@ -150,6 +164,20 @@
       .feature-name { font-size: 19px; }
     }
   </style>
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="CopStopReady">
+  <meta property="og:title" content="Features - CopStopReady">
+  <meta property="og:description" content="Everything CopStopReady does. Audio recording, Doc Wallet, Ticket Fighter, Rights Booklet, CSR Coach, and more.">
+  <meta property="og:url" content="https://copstopready.com/features/">
+  <meta property="og:image" content="https://copstopready.com/img/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Features - CopStopReady">
+  <meta name="twitter:description" content="Everything CopStopReady does. Audio recording, Doc Wallet, Ticket Fighter, Rights Booklet, CSR Coach, and more.">
+  <meta name="twitter:image" content="https://copstopready.com/img/og.jpg">
 </head>
 <body>
   <div class="glowfield"></div>
@@ -167,6 +195,24 @@
       <div class="shot"><img src="/img/ticket_result.jpg" alt="Ticket scan review" width="560" height="1213"></div>
     </div>
 
+    <div class="showcase">
+      <div class="sc-phone"><img src="/img/truecost_result.jpg" alt="Ticket Fighter true-cost breakdown" width="560" height="1213"></div>
+      <div>
+        <h2>The ticket's <span class="accent">true cost</span>.</h2>
+        <p>A traffic ticket is never just the fine. The moment Ticket Fighter reads your citation, it breaks down what the ticket will <strong>really</strong> cost you &mdash; court costs, the New Jersey surcharge, the points added to your license, and the three-year insurance increase those points trigger.</p>
+        <p>Most tickets don't even print a dollar amount, so if the fine isn't detected you just <strong>tap to add it</strong> and the total updates instantly. Suddenly that "$500 moving violation" is <span class="big">$1,433&ndash;$2,333</span> out of your pocket &mdash; and that's exactly why Ticket Fighter was born.</p>
+      </div>
+    </div>
+
+    <div class="showcase">
+      <div class="sc-phone"><img src="/img/court_warning.jpg" alt="Full-screen court date warning with countdown" width="560" height="1213"></div>
+      <div>
+        <h2>Never miss your <span class="accent">court date</span>.</h2>
+        <p>Scan your ticket and CopStopReady locks onto the date that matters most. Two days before you're due in court, it throws a <strong>free, full-screen alert</strong> &mdash; a live countdown, the courthouse address, and your ticket number &mdash; so the date can't slip past you.</p>
+        <p>Miss court and you're looking at a <strong>bench warrant and a license suspension</strong>; this makes sure that never happens. <span class="big">Free for everyone, every scan.</span></p>
+      </div>
+    </div>
+
     <div class="features-list">
 
       <div class="feature">
@@ -174,7 +220,7 @@
           <div class="feature-icon">🎙️</div>
           <div class="feature-name">Audio Recording</div>
         </div>
-        <p>Tap the mic. Capture starts immediately. Survives lock screen, force-close, and low battery. Every recording is <strong>auto-titled with the GPS location and timestamp</strong> the moment it begins, so the court-grade evidence is ready before the encounter even ends.</p>
+        <p>Tap the mic and audio records straight to your <strong>PIN-locked, on-device Vault</strong> &mdash; never uploaded. One tap and you're recording; the same screen shows the lines to say to the officer.</p>
       </div>
 
       <div class="feature">
@@ -182,7 +228,7 @@
           <div class="feature-icon">🗂️</div>
           <div class="feature-name">Vault</div>
         </div>
-        <p>Every recording stored locally on your device. PIN-locked. Auto-named by location and time so you can find the one you need without scrolling through dozens of files called "audio_001.m4a". Example: <strong>"Stop on Raritan Avenue, May 21, 3:06pm"</strong>. Browse, play back, share with your lawyer.</p>
+        <p>Every recording is stored locally on your device and PIN-locked, tagged with the <strong>date and time</strong> so you can find the one you need without scrolling through files called "audio_001.m4a". Browse, play back, and share with your lawyer.</p>
       </div>
 
       <div class="feature">
@@ -190,15 +236,15 @@
           <div class="feature-icon">📇</div>
           <div class="feature-name">Doc Wallet</div>
         </div>
-        <p>Your license, registration, and insurance photos in one place. PIN-locked. <strong>Single-document mode</strong> lets you hand the phone to the officer showing ONLY what they asked for, without unlocking the rest of your phone or exposing other documents.</p>
+        <p>Your driver's license, registration, and insurance card, stored right on your phone &mdash; no uploads, no cloud, ever. Everything sits behind your PIN (the same one that guards your Vault, encrypted in your phone's secure hardware). <strong>Renewal reminders</strong> land at 90, 60, 30, 14, 7 and 3 days before anything expires, and <strong>Renew Now</strong> jumps you straight to the official renewal page.</p>
       </div>
 
       <div class="feature">
         <div class="feature-head">
           <div class="feature-icon">⚖️</div>
-          <div class="feature-name">Ticket Fighter<span class="feature-price">Coming Soon</span></div>
+          <div class="feature-name">Ticket Fighter<span class="feature-price">Free while testing &middot; NJ</span></div>
         </div>
-        <p><strong>Coming in a future update.</strong> Take a photo of your ticket. We extract the statute, violation, fine, court date, and officer info, then generate a <strong>court-ready letter</strong> that finds the same procedural holes a traffic lawyer would charge $400 to identify. When it launches: $9.99 per scan, with a <strong>60-day money-back guarantee</strong> if you are not satisfied with your court outcome. Limit one refund per customer.</p>
+        <p><strong>One missed error can flip the whole outcome</strong> &mdash; and finding it is exactly what a defense lawyer charges $400 to do. Ticket Fighter does the same thing in seconds, on your phone. <strong>Works now, for New Jersey tickets:</strong> snap a photo and it hunts the errors and defects that get tickets challenged. Every scan also locks onto your court date and fires a <strong>free, full-screen alert two days before</strong> &mdash; pre-filled with your date, courthouse, and ticket number so it can't slip past you. The full <strong>court-ready letter</strong> is the paid unlock: $9.99 per scan with a <strong>60-day money-back guarantee</strong>, coming when billing turns on. Free to run scans while we're in testing. More states on the way.</p>
       </div>
 
       <div class="feature">
@@ -214,7 +260,7 @@
           <div class="feature-icon">🚨</div>
           <div class="feature-name">CSR Coach</div>
         </div>
-        <p>In-the-moment guidance during an active stop. Step-by-step reminders for what to say and not say, what to hand over and what to keep, when to invoke your rights and how. <strong>Designed to be glanceable</strong> while your hands are on the wheel.</p>
+        <p>In-the-moment guidance during an active stop &mdash; step-by-step reminders for what to say and what not to, what to hand over and what to keep, and when and how to invoke your rights. <strong>Glanceable while your hands stay on the wheel</strong>, so you're never guessing your next move. With a plan in your pocket, a traffic stop feels a whole lot less like an ambush &mdash; and a whole lot less stressful.</p>
       </div>
 
       <div class="feature">
@@ -230,7 +276,7 @@
           <div class="feature-icon">🛰️</div>
           <div class="feature-name">GPS Location Stamp</div>
         </div>
-        <p>Every audio recording is automatically stamped with the exact GPS coordinates of where it started AND where it stopped, embedded directly in the local metadata file. Documents <strong>WHERE the encounter happened</strong> for court evidence and complaint filings. Stays on your device. Never transmitted.</p>
+        <p>When you allow location access, every audio recording is stamped with the GPS coordinates of where it started and where it stopped, embedded in the local metadata file. Documents <strong>WHERE the encounter happened</strong> for your own records. Stays on your device. Never transmitted.</p>
       </div>
 
       <div class="feature">
@@ -268,8 +314,8 @@
     </div>
 
     <div class="cta-section">
-      <div class="cta-headline">All of this. Free to use.</div>
-      <p>Right now, everything is free. Paid features are coming in a future update — Ticket Fighter ($9.99/scan) and Text Reminders ($1.99/mo). Until then, the whole app is free to use.</p>
+      <div class="cta-headline">All of this. Free right now.</div>
+      <p>Everything is free while we're in testing — including Ticket Fighter scans. When billing turns on, Ticket Fighter will be $9.99/scan and Text Reminders $1.99/mo. Until then, the whole app is free to use.</p>
       <div class="cta-status">Coming Soon to Google Play</div>
     </div>
 
