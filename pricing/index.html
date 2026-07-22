@@ -344,19 +344,13 @@
       </div>
 
       <h3>What the scanner actually does</h3>
-      <p>Ticket Fighter is not a simple OCR tool that reads text. It is a <strong>multi-engine analysis pipeline</strong> built from the ground up to find the same procedural cracks a good defense attorney looks for in a ticket. You take one photo. We do five passes simultaneously:</p>
+      <p>Ticket Fighter isn't an OCR app that reads your ticket back to you. It's a <strong>17-layer intelligence engine</strong>, hand-built by the CSR team, that takes a single photo of your citation and runs it through the same procedural gauntlet a seasoned defense attorney would &mdash; in about thirty seconds, entirely on your phone.</p>
 
-      <p><strong>1. OCR extraction.</strong> Statute code, violation, ticket number, defendant info, officer badge, fine amount, location, plate, court date &mdash; all pulled off your physical citation.</p>
+      <p>The first layers <strong>read and reconstruct</strong> every field on the citation &mdash; statute code, violation, ticket number, defendant, officer badge, fine, plate, location, court, date and time. Each value is extracted, cross-checked, and confidence-scored, so a smudge, a glare, or a bad camera angle never slips a wrong number into your defense.</p>
 
-      <p><strong>2. Time analysis.</strong> The TimeEngine cross-checks the violation timestamp, the court time, and the issued time for inconsistencies that defense lawyers routinely use to challenge admissibility.</p>
+      <p>Then the dedicated analysis engines go hunting for the cracks. <strong>TimeEngine</strong> cross-references the violation timestamp, issue time, and court time for the inconsistencies lawyers use to challenge admissibility. <strong>CourtEngine</strong> validates the listed municipal court against the citation's jurisdiction and flags the mismatches that can void venue. <strong>ContradictionEngine</strong> checks every field against every other field &mdash; wrong vehicle, mismatched statute and violation, internally inconsistent fines &mdash; the officer errors that get cases dismissed when they're raised properly. <strong>EvidenceEngine</strong> maps exactly what the prosecution would have to prove, and what the citation fails to supply.</p>
 
-      <p><strong>3. Court verification.</strong> The CourtEngine validates the listed municipal court against the citation jurisdiction and flags mismatches that void venue.</p>
-
-      <p><strong>4. Contradiction detection.</strong> The ContradictionEngine cross-references every extracted field against every other field to catch the kind of officer errors &mdash; wrong vehicle, mismatched statute and violation, internally inconsistent fines &mdash; that get cases dismissed when raised properly.</p>
-
-      <p><strong>5. Evidentiary gap analysis.</strong> The EvidenceEngine identifies what the prosecution would need to prove to convict, and what is missing from the citation that they cannot supply later.</p>
-
-      <p>The FusionEngine then weighs all five passes and generates a <strong>court-ready letter</strong> calibrated to the strongest defense your specific ticket supports &mdash; not a generic template, an actual argument built around the specific holes our pipeline found.</p>
+      <p>Finally, the <strong>FusionEngine</strong> weighs every layer at once and writes a <strong>court-ready letter</strong> calibrated to the single strongest defense your specific ticket supports &mdash; not a fill-in-the-blank template, but a real argument built around the exact holes the stack found. One photo goes in; the kind of defense a lawyer bills $400 to write comes out.</p>
 
       <h3>Why we can charge $9.99</h3>
       <p>Because we do not run servers. Because we do not pay a lawyer per scan. Because we built the analysis engine ourselves and the marginal cost of one more scan is essentially zero. We could charge $99. We charge $9.99 because <strong>the law should not only be enforceable by people who can afford a lawyer</strong>.</p>
