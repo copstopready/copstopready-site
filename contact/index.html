@@ -44,7 +44,8 @@
       background: rgba(0, 0, 0, 0.55);
       border: 2px solid var(--csr-accent);
       border-radius: 10px;
-      padding: 40px 28px;
+      padding: 0;
+      overflow: hidden;
       text-align: center;
       box-shadow:
         0 0 12px rgba(255, 0, 0, 0.35),
@@ -80,6 +81,8 @@
     }
     .contact-card .email-btn:hover { background: var(--csr-accent-hover); }
     .contact-card .email-btn:active { transform: translateY(1px); }
+    .contact-hero { display: block; width: 100%; height: auto; border-bottom: 1px solid rgba(255,0,0,0.35); }
+    .contact-body { padding: 30px 28px; }
     .info {
       margin-top: 32px;
       background: rgba(0, 0, 0, 0.55);
@@ -121,7 +124,7 @@
       main { padding: 72px 24px 96px; }
       .page-header h1 { font-size: 56px; }
       .page-header p { font-size: 18px; }
-      .contact-card { padding: 56px 40px; }
+      .contact-body { padding: 40px 40px; }
       .contact-card .email { font-size: 28px; }
       .info { padding: 28px 32px; }
     }
@@ -152,9 +155,11 @@
     </div>
 
     <div class="contact-card">
-      <div class="label">Email Support</div>
-      <div class="email">support@copstopready.com</div>
-      <a href="mailto:support@copstopready.com?subject=CopStopReady%20Support" class="email-btn">Send Email</a>
+      <img class="contact-hero" src="/img/og.jpg" alt="CopStopReady — Your Rights. Your Shield. Your Control.">
+      <div class="contact-body">
+        <div class="email">support@copstopready.com</div>
+        <a href="mailto:support@copstopready.com?subject=CopStopReady%20Support" class="email-btn">Send Email</a>
+      </div>
     </div>
 
     <div class="info">
