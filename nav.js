@@ -21,39 +21,16 @@
     return p;
   }
 
-  // Share button handler: native share sheet on mobile, copy-link on desktop.
-  window.csrShare = function (btn) {
-    var url = 'https://copstopready.com';
-    var data = {
-      title: 'CopStopReady — Your Rights. Your Shield. Your Control.',
-      text: 'A 100% on-device app that coaches you through a police stop, records it, and fights the ticket. Nothing leaves your phone.',
-      url: url,
-    };
-    if (navigator.share) { navigator.share(data).catch(function () {}); return; }
-    var flash = function () {
-      if (!btn) return;
-      var prev = btn.textContent;
-      btn.textContent = 'Link copied!';
-      setTimeout(function () { btn.textContent = prev; }, 1600);
-    };
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(url).then(flash, function () {});
-    } else { flash(); }
-  };
-
   function buildNav() {
     var host = document.getElementById('csr-nav');
     if (!host) return;
 
     var currentPath = normalizePath(window.location.pathname);
-    var items = NAV_LINKS.map(function (l) {
+    var linksHtml = NAV_LINKS.map(function (l) {
       var isCurrent = normalizePath(l.href) === currentPath;
       var ariaCur = isCurrent ? ' aria-current="page"' : '';
       return '<a class="csr-nav-link" href="' + l.href + '"' + ariaCur + '>' + l.label + '</a>';
-    });
-    // Share button, placed right after Home.
-    items.splice(1, 0, '<button type="button" class="csr-nav-link csr-nav-share" onclick="csrShare(this)">↗ Share</button>');
-    var linksHtml = items.join('');
+    }).join('');
 
     host.innerHTML = [
       '<div class="csr-nav-inner">',

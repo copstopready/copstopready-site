@@ -37,12 +37,6 @@
       max-width: 620px;
       margin: 0 auto;
     }
-    .privacy-lead {
-      max-width: 720px; margin: 22px auto 0;
-      color: var(--csr-fg-dim); font-size: 16px; line-height: 1.62;
-    }
-    .privacy-lead b { color: var(--csr-fg); }
-    .privacy-lead .g { color: #22c55e; font-weight: 700; }
     .glowfield {
       position: fixed; inset: 0; z-index: -1; pointer-events: none;
       background:
@@ -50,8 +44,8 @@
         radial-gradient(45% 40% at 100% 0%, rgba(34,197,94,.09), transparent 60%);
     }
     .tiers {
-      display: grid;
-      grid-template-columns: 1fr;
+      display: flex;
+      flex-direction: column;
       gap: 20px;
       margin-bottom: 56px;
     }
@@ -61,9 +55,6 @@
       padding: 32px 26px;
     }
     .tier-free {
-      border: 1px solid var(--csr-border);
-    }
-    .tier-soon {
       border: 1px solid var(--csr-border);
     }
     .tier-paid {
@@ -235,25 +226,12 @@
       main { padding: 72px 24px 96px; }
       .page-header h1 { font-size: 56px; }
       .page-header p { font-size: 18px; }
-      .tiers { grid-template-columns: repeat(2, 1fr); }
+      .tiers { flex-direction: row; }
+      .tier { flex: 1; }
       .deep-dive { padding: 40px 36px; }
       .deep-dive h2 { font-size: 30px; }
     }
   </style>
-  <link rel="icon" type="image/png" href="/favicon.png">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="CopStopReady">
-  <meta property="og:title" content="Pricing - CopStopReady">
-  <meta property="og:description" content="CopStopReady is free today. Ticket Fighter and Text Reminders are paid features coming in a future update.">
-  <meta property="og:url" content="https://copstopready.com/pricing/">
-  <meta property="og:image" content="https://copstopready.com/img/og.jpg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Pricing - CopStopReady">
-  <meta name="twitter:description" content="CopStopReady is free today. Ticket Fighter and Text Reminders are paid features coming in a future update.">
-  <meta name="twitter:image" content="https://copstopready.com/img/og.jpg">
 </head>
 <body>
   <div class="glowfield"></div>
@@ -262,8 +240,7 @@
   <main>
     <div class="page-header">
       <h1><span class="accent">PRICING</span></h1>
-      <p>Right now, everything in CopStopReady is free &mdash; including Ticket Fighter scans for New Jersey tickets. When billing turns on, Ticket Fighter will be $9.99 per scan and Text Reminders $1.99/mo. Until then, it's all free.</p>
-      <p class="privacy-lead">Over <b>500 hours</b> went into this &mdash; from the first design sketch to the far harder part: making every last feature run <span class="g">100% on your phone</span>. No account. No servers. No prying eyes. That's what makes CopStopReady the <b>first of its kind</b> &mdash; because it's the hardest kind to build. It's the first privacy-first app that walks you through a traffic stop like a <b>seasoned pro</b>, telling you exactly what to say and do in the moment, while your recordings, documents and data never leave your device. There's no account, so we couldn't see what's on your phone even if we tried. That was never a shortcut &mdash; it's the whole point.</p>
+      <p>Right now, CopStopReady is completely free. Two paid features are coming in a future update &mdash; Ticket Fighter ($9.99/scan) and Text Reminders ($1.99/mo). Until then, everything is free.</p>
     </div>
 
     <div class="tiers">
@@ -274,7 +251,7 @@
         <div class="tier-price">$0</div>
         <div class="tier-subtitle">No account. Everything below is free right now.</div>
         <ul>
-          <li>Audio recording saved to your on-device Vault (with GPS coordinates in local metadata)</li>
+          <li>Audio recording with auto-titled GPS metadata</li>
           <li>Vault &mdash; unlimited local recording storage</li>
           <li>Doc Wallet for license, registration, insurance</li>
           <li>Full Rights Booklet, all sections</li>
@@ -285,46 +262,18 @@
       </div>
 
       <div class="tier tier-paid">
-        <div class="coming-pill">Free while testing</div>
+        <div class="coming-pill">Coming Soon</div>
         <div class="tier-label">Premium Scan</div>
         <div class="tier-name">Ticket Fighter</div>
         <div class="tier-price">$9.99<span class="per">/ scan</span></div>
-        <div class="tier-subtitle">Works now for New Jersey tickets &mdash; free while we're in testing. When pricing turns on, you pay only when you actually get a ticket. No subscription.</div>
+        <div class="tier-subtitle">Pay only when you actually get a ticket. No subscription.</div>
         <ul>
           <li>Multi-engine scanner extracts every field on your ticket</li>
           <li>Detects contradictions, evidentiary gaps, and procedural defects</li>
           <li>Generates a court-ready letter sized to your specific ticket</li>
           <li>Beatability score across structural, evidentiary, and plea-path angles</li>
-          <li>60-day money-back guarantee if it can't produce a usable letter</li>
+          <li>60-day money-back guarantee if you are not satisfied</li>
           <li>Limit one refund per customer</li>
-        </ul>
-      </div>
-
-      <div class="tier tier-soon">
-        <div class="coming-pill">Free while testing</div>
-        <div class="tier-label">Text Reminders</div>
-        <div class="tier-name">Renewal Reminders</div>
-        <div class="tier-price">$1.99<span class="per">/ month</span></div>
-        <div class="tier-subtitle">Free right now. When billing turns on, it's $1.99/mo for text reminders on all your documents.</div>
-        <ul>
-          <li>Text alerts for every document you store</li>
-          <li>Warnings at 90, 60, 30, 14, 7 and 3 days before expiry</li>
-          <li>Covers license, registration and insurance</li>
-          <li>Never drive on an expired doc again</li>
-        </ul>
-      </div>
-
-      <div class="tier tier-soon">
-        <div class="coming-pill">Free while testing</div>
-        <div class="tier-label">Family Plan</div>
-        <div class="tier-name">Family 5-Pack</div>
-        <div class="tier-price">$4.99<span class="per">/ month</span></div>
-        <div class="tier-subtitle">Cover a whole family &mdash; five people, up to fifteen documents &mdash; for less than the price of a sandwich. Nobody checks a renewal date, and nobody eats a late fee for forgetting.</div>
-        <ul>
-          <li>Up to 5 people, 15 documents in one plan</li>
-          <li>Text reminders on everyone's license, reg &amp; insurance</li>
-          <li>Warnings at 90, 60, 30, 14, 7 and 3 days before expiry</li>
-          <li>No missed dates, no late fees &mdash; for the whole household</li>
         </ul>
       </div>
 
@@ -333,7 +282,7 @@
     <div class="deep-dive">
       <h2>Why <span class="accent">$9.99</span> will beat a $400 lawyer letter</h2>
 
-      <p><strong>Ticket Fighter works today for New Jersey tickets &mdash; free while we're in testing.</strong> When billing turns on, here is what you get for $9.99 instead of $400.</p>
+      <p><strong>Ticket Fighter is a paid feature coming in a future update.</strong> When it launches, here is what you get for $9.99 instead of $400.</p>
 
       <p>Traffic attorneys charge <strong>$400 to $600</strong> just to write the same kind of letter our scanner generates in 30 seconds &mdash; and most of that time is the lawyer reading your ticket and typing the same boilerplate they have typed a thousand times before. We automated the part they were already automating in their heads.</p>
 
@@ -351,20 +300,26 @@
       </div>
 
       <h3>What the scanner actually does</h3>
-      <p>Ticket Fighter isn't an OCR app that reads your ticket back to you. It's a <strong>17-layer intelligence engine</strong>, hand-built by the CSR team, that takes a single photo of your citation and runs it through the same procedural gauntlet a seasoned defense attorney would &mdash; in about thirty seconds, entirely on your phone.</p>
+      <p>Ticket Fighter is not a simple OCR tool that reads text. It is a <strong>multi-engine analysis pipeline</strong> built from the ground up to find the same procedural cracks a good defense attorney looks for in a ticket. You take one photo. We do five passes simultaneously:</p>
 
-      <p>The first layers <strong>read and reconstruct</strong> every field on the citation &mdash; statute code, violation, ticket number, defendant, officer badge, fine, plate, location, court, date and time. Each value is extracted, cross-checked, and confidence-scored, so a smudge, a glare, or a bad camera angle never slips a wrong number into your defense.</p>
+      <p><strong>1. OCR extraction.</strong> Statute code, violation, ticket number, defendant info, officer badge, fine amount, location, plate, court date &mdash; all pulled off your physical citation.</p>
 
-      <p>Then the dedicated analysis engines go hunting for the cracks. <strong>TimeEngine</strong> cross-references the violation timestamp, issue time, and court time for the inconsistencies lawyers use to challenge admissibility. <strong>CourtEngine</strong> validates the listed municipal court against the citation's jurisdiction and flags the mismatches that can void venue. <strong>ContradictionEngine</strong> checks every field against every other field &mdash; wrong vehicle, mismatched statute and violation, internally inconsistent fines &mdash; the officer errors that get cases dismissed when they're raised properly. <strong>EvidenceEngine</strong> maps exactly what the prosecution would have to prove, and what the citation fails to supply.</p>
+      <p><strong>2. Time analysis.</strong> The TimeEngine cross-checks the violation timestamp, the court time, and the issued time for inconsistencies that defense lawyers routinely use to challenge admissibility.</p>
 
-      <p>Finally, the <strong>FusionEngine</strong> weighs every layer at once and writes a <strong>court-ready letter</strong> calibrated to the single strongest defense your specific ticket supports &mdash; not a fill-in-the-blank template, but a real argument built around the exact holes the stack found. One photo goes in; the kind of defense a lawyer bills $400 to write comes out.</p>
+      <p><strong>3. Court verification.</strong> The CourtEngine validates the listed municipal court against the citation jurisdiction and flags mismatches that void venue.</p>
+
+      <p><strong>4. Contradiction detection.</strong> The ContradictionEngine cross-references every extracted field against every other field to catch the kind of officer errors &mdash; wrong vehicle, mismatched statute and violation, internally inconsistent fines &mdash; that get cases dismissed when raised properly.</p>
+
+      <p><strong>5. Evidentiary gap analysis.</strong> The EvidenceEngine identifies what the prosecution would need to prove to convict, and what is missing from the citation that they cannot supply later.</p>
+
+      <p>The FusionEngine then weighs all five passes and generates a <strong>court-ready letter</strong> calibrated to the strongest defense your specific ticket supports &mdash; not a generic template, an actual argument built around the specific holes our pipeline found.</p>
 
       <h3>Why we can charge $9.99</h3>
       <p>Because we do not run servers. Because we do not pay a lawyer per scan. Because we built the analysis engine ourselves and the marginal cost of one more scan is essentially zero. We could charge $99. We charge $9.99 because <strong>the law should not only be enforceable by people who can afford a lawyer</strong>.</p>
 
       <div class="guarantee">
         <div class="stamp">60-Day Money-Back Guarantee</div>
-        <p>Once paid scans go live, if Ticket Fighter can't produce a usable court letter for your scan, you don't lose a dime &mdash; just screenshot the result and email it to <strong>support@copstopready.com</strong> within 60 days of purchase, and we'll refund you in full. One refund per customer.</p>
+        <p>When Ticket Fighter launches: if you are not satisfied with your court outcome, email <strong>support@copstopready.com</strong> within 60 days of your court date for a full refund. No questions asked. No documentation required. Limit one refund per customer.</p>
       </div>
     </div>
 

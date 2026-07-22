@@ -71,7 +71,7 @@
       background: radial-gradient(circle, rgba(255,0,0,.35), transparent 62%); filter: blur(30px); z-index: 0; }
     .phone { position: relative; z-index: 1; width: min(300px,80vw); border-radius: 34px; padding: 9px;
       background: linear-gradient(#1a1d1a,#0a0c0a); border: 1px solid #2a2f2a; box-shadow: 0 30px 70px rgba(0,0,0,.65); }
-    .phone img { width: 100%; height: auto; display: block; border-radius: 26px; }
+    .phone img { width: 100%; display: block; border-radius: 26px; }
     @media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; gap: 26px; } .phone-stage { order: -1; } }
 
     /* PRIVACY BAND */
@@ -116,24 +116,18 @@
     .more:hover { border-color: var(--csr-accent); color: var(--csr-accent); }
 
     /* SHOTS */
-    .shots { display: grid; grid-template-columns: repeat(4,1fr); gap: 18px; align-items: start; }
-    @media (max-width: 900px) { .shots { grid-template-columns: 1fr 1fr; max-width: 620px; margin: 0 auto; } }
-    @media (max-width: 520px) { .shots { grid-template-columns: 1fr; max-width: 320px; } }
+    .shots { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; align-items: start; }
+    @media (max-width: 820px) { .shots { grid-template-columns: 1fr; max-width: 340px; margin: 0 auto; } }
     .shot { background: linear-gradient(#141714,#0a0c0a); border: 1px solid #232a23; border-radius: 22px; padding: 8px; }
-    .shot img { width: 100%; height: auto; display: block; border-radius: 16px; }
+    .shot img { width: 100%; display: block; border-radius: 16px; }
     .shot span { display: block; text-align: center; color: var(--csr-fg-dim); font-size: 13.5px; font-weight: 600; padding: 12px 6px 6px; }
 
     /* PRICING TEASER */
-    .pricelead { color: #cdd3cd; max-width: 700px; font-size: 16.5px; line-height: 1.62; margin: 0 0 22px; }
-    .pricelead b { color: #fff; }
-    .pricelead .g { color: #22c55e; font-weight: 700; }
     .pricebar { display: inline-flex; align-items: center; gap: 10px; border: 1px solid rgba(34,197,94,.35);
       background: rgba(34,197,94,.07); border-radius: 11px; padding: 11px 16px; color: #dfe4df; font-size: 14.5px; margin-bottom: 26px; }
     .pricebar b { color: #22c55e; }
-    .plans { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; }
-    .plan-lead { color: var(--csr-fg-dim); font-size: 13.5px; line-height: 1.5; margin: 12px 0 0; }
-    @media (max-width: 980px) { .plans { grid-template-columns: repeat(2,1fr); } }
-    @media (max-width: 560px) { .plans { grid-template-columns: 1fr; } }
+    .plans { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
+    @media (max-width: 820px) { .plans { grid-template-columns: 1fr; } }
     .plan { background: rgba(0,0,0,.5); border: 1px solid var(--csr-border); border-radius: 16px; padding: 26px; }
     .plan.hi { border-color: rgba(255,214,10,.4); background: linear-gradient(170deg, rgba(255,214,10,.06), rgba(0,0,0,.5)); }
     .plan .pt { font-size: 12.5px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--csr-fg-mute); margin: 0 0 10px; }
@@ -162,20 +156,6 @@
 
     @media (min-width: 768px) { .hero { padding: 56px 0 24px; } }
   </style>
-  <link rel="icon" type="image/png" href="/favicon.png">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="CopStopReady">
-  <meta property="og:title" content="CopStopReady — Your Rights. Your Shield. Your Control.">
-  <meta property="og:description" content="CopStopReady is a 100% on-device Android app that walks you through a police or traffic stop — records it to a locked vault, tells you exactly what to say, fights the ticket afterward, and keeps your documents ready. Nothing leaves your phone.">
-  <meta property="og:url" content="https://copstopready.com/">
-  <meta property="og:image" content="https://copstopready.com/img/og.jpg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="CopStopReady — Your Rights. Your Shield. Your Control.">
-  <meta name="twitter:description" content="CopStopReady is a 100% on-device Android app that walks you through a police or traffic stop — records it to a locked vault, tells you exactly what to say, fights the ticket afterward, and keeps your documents ready. Nothing leaves your phone.">
-  <meta name="twitter:image" content="https://copstopready.com/img/og.jpg">
 </head>
 <body>
   <div class="glowfield"></div>
@@ -190,7 +170,7 @@
         <div class="brandline mark"><span class="c">COPSTOP</span><span class="r">READY</span><span class="tm">&trade;</span></div>
         <p class="tagline">Your Rights. Your Shield. Your Control.</p>
         <span class="ul"></span>
-        <p class="lede">A <b>100% on-device</b> Android app that walks you through a police or traffic stop &mdash; records it to a locked vault, tells you the exact words to say, fights the ticket afterward, and keeps your documents ready. <b>Nothing ever leaves your phone</b> &mdash; no account, no cloud, no servers. With nothing to breach, subpoena, or sell, it's about as safe as an app on your phone can be.</p>
+        <p class="lede">A <b>100% on-device</b> Android app that walks you through a police or traffic stop &mdash; records it to a locked vault, tells you the exact words to say, fights the ticket afterward, and keeps your documents ready. <b>Nothing ever leaves your phone.</b></p>
         <form class="form" onsubmit="return csrJoin(event,this)">
           <input type="email" name="email" placeholder="you@email.com" required aria-label="Email address">
           <button class="btn btn-red" type="submit">Notify me at launch &rarr;</button>
@@ -246,7 +226,7 @@
           <span class="tag tag-soon">Free for now</span>
           <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 13l-7 7"/><path d="M9.5 6.5l8 8"/><path d="M11 5l3-3 6 6-3 3z" fill="currentColor" stroke="none"/><path d="M4 22h8"/></svg></div>
           <h3>Ticket Fighter</h3>
-          <p>Scan your New Jersey ticket now and Ticket Fighter finds the errors and defects that get tickets challenged. The <span class="worth">court-ready letter law firms charge $400+ for</span> is the paid unlock &mdash; free to scan while we're in testing. More states coming.</p>
+          <p>Scan a traffic ticket and it hunts for the errors and defects that get tickets challenged, then builds a <span class="worth">court-ready letter law firms charge $400+ for</span> &mdash; plus a continuance letter and a plain-English prep guide. NJ-tuned today, more states coming.</p>
         </div>
 
         <div class="card f-green">
@@ -285,7 +265,6 @@
         <div class="shot"><img src="/img/live_recording.jpg" alt="Live recording script" width="560" height="1213"><span>Live recording &mdash; say this</span></div>
         <div class="shot"><img src="/img/ticket_result.jpg" alt="Ticket scan review" width="560" height="1213"><span>Ticket scan &mdash; every field checked</span></div>
         <div class="shot"><img src="/img/court_letter.jpg" alt="Court-ready letter" width="560" height="1213"><span>Court-ready letter, generated</span></div>
-        <div class="shot"><img src="/img/truecost_result.jpg" alt="True cost of a ticket" width="560" height="1213"><span>True cost &mdash; fine + points + insurance</span></div>
       </div>
     </div>
   </section>
@@ -295,7 +274,6 @@
     <div class="wrap">
       <p class="kicker">Pricing</p>
       <h2>Honest and simple.</h2>
-      <p class="pricelead">Over <b>500 hours</b> went into this &mdash; from the first design sketch to the far harder part: making every last feature run <span class="g">100% on your phone</span>. No account. No servers. No prying eyes. That's what makes CopStopReady the <b>first of its kind</b> &mdash; because it's the hardest kind to build. It's the first privacy-first app that walks you through a traffic stop like a <b>seasoned pro</b>, telling you exactly what to say and do in the moment, while your recordings, documents and data never leave your device. There's no account, so we couldn't see what's on your phone even if we tried. That was never a shortcut &mdash; it's the whole point.</p>
       <div class="pricebar"><b>Free while we're in testing.</b>&nbsp; Billing isn't live yet &mdash; the prices below are what's planned for a future update.</div>
       <div class="plans">
         <div class="plan">
@@ -328,17 +306,6 @@
             <li>Text alerts for every document</li>
             <li>90 / 60 / 30 / 14 / 7 / 3-day warnings</li>
             <li>Never drive on an expired doc</li>
-          </ul>
-        </div>
-        <div class="plan">
-          <p class="pt">Family 5-Pack</p>
-          <p class="price">$4.99 <small>/ month</small></p>
-          <p class="free-now">Free for now &middot; coming in a future update</p>
-          <p class="plan-lead">Cover a whole family &mdash; five people, up to fifteen documents &mdash; for less than the price of a sandwich. Nobody's checking renewal dates, and nobody's eating a late fee for forgetting.</p>
-          <ul>
-            <li>Up to 5 people &middot; 15 documents</li>
-            <li>Text reminders on every license, reg &amp; insurance</li>
-            <li>90 / 60 / 30 / 14 / 7 / 3-day warnings</li>
           </ul>
         </div>
       </div>
