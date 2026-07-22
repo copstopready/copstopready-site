@@ -164,21 +164,30 @@ html {
     /* gridMajor vertical. */
     linear-gradient(to right, rgba(34, 197, 94, 0.12) 1px, transparent 1px),
     /* gridMajor horizontal. */
-    linear-gradient(to bottom, rgba(34, 197, 94, 0.12) 1px, transparent 1px);
+    linear-gradient(to bottom, rgba(34, 197, 94, 0.12) 1px, transparent 1px),
+    /* glow: green top-right (mirrors in-app mic halo). */
+    radial-gradient(55% 45% at 100% 0%, rgba(34, 197, 94, 0.20), transparent 62%),
+    /* glow: purple bottom-left (mirrors in-app CSR Coach card). */
+    radial-gradient(55% 50% at 0% 100%, rgba(139, 92, 246, 0.18), transparent 62%);
   background-size:
     9px 9px,
     9px 9px,
     36px 36px,
-    36px 36px;
-  background-attachment: fixed, fixed, fixed, fixed;
-  background-position: 0 0, 0 0, 0 0, 0 0;
-  background-repeat: repeat, repeat, repeat, repeat;
+    36px 36px,
+    100% 100%,
+    100% 100%;
+  background-attachment: fixed, fixed, fixed, fixed, fixed, fixed;
+  background-position: 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
+  background-repeat: repeat, repeat, repeat, repeat, no-repeat, no-repeat;
 }
 
 /* Body inherits transparent so html grid shows through. */
 body {
   background: transparent;
 }
+
+/* BC-SITE-GLOW-1: shared glow replaces per-page red .glowfield. */
+.glowfield { display: none !important; }
 
 /* On small screens, denser grid feels right; keep 36px. */
 @media (min-width: 768px) {
@@ -187,7 +196,9 @@ body {
       12px 12px,
       12px 12px,
       48px 48px,
-      48px 48px;
+      48px 48px,
+      100% 100%,
+      100% 100%;
   }
 }
 
