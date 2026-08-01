@@ -85,6 +85,12 @@
       font-size: 14px; font-weight: 600; color: #dfe4df; }
     .chip b { color: #22c55e; }
 
+    /* QUIZ CALLOUT */
+    .quizcta { background: linear-gradient(160deg, rgba(255,0,0,.07), rgba(0,0,0,.5)); border: 1px solid rgba(255,0,0,.3); border-radius: 18px; padding: 34px 30px; box-shadow: 0 0 22px rgba(255,0,0,.14); }
+    .quizcta h2 { font-size: clamp(24px,3.4vw,36px); font-weight: 900; margin: 0 0 12px; letter-spacing: -.01em; }
+    .quizcta p { color: var(--csr-fg-dim); max-width: 640px; margin: 0 0 22px; font-size: 16px; }
+    .quizcta .btn { text-decoration: none; }
+
     /* SECTIONS */
     .sec { padding: 52px 0; }
     .kicker { color: var(--csr-accent); font-weight: 800; letter-spacing: .14em; text-transform: uppercase; font-size: 12.5px; margin: 0 0 8px; }
@@ -216,6 +222,18 @@
         <div class="chip">On-device processing</div>
         <div class="chip">PIN-locked vault</div>
         <div class="chip">GPS stays local</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUIZ CALLOUT -->
+  <section class="sec" style="padding:40px 0 8px">
+    <div class="wrap">
+      <div class="quizcta">
+        <p class="kicker">Free &middot; about 2 minutes</p>
+        <h2>Are you <span class="mark"><span class="c">COPSTOP</span><span class="r">READY</span></span>?</h2>
+        <p>Run a real traffic stop before it ever happens. Seven quick calls &mdash; hand over your documents, plead the 5th, decline a search, keep recording &mdash; and find out if you'd pass. You'll see exactly why each move is the safe one.</p>
+        <a class="btn btn-red" href="/quiz/">Take the test &rarr;</a>
       </div>
     </div>
   </section>
