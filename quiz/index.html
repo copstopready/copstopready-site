@@ -401,10 +401,11 @@ function choose(i){
   const good=(i===right);
   const why=document.getElementById('why');
   why.className='why show '+(good?'good':'bad');
-  why.innerHTML=`<span class="tag">${good?'✓ Right call':'✗ Not the safe move'}</span>${s.why[i]}`;
+  why.innerHTML=`<span class="tag">${good?'✓ Right call':'✗ Not the safe move'} <button type="button" class="spk" onclick="playQ('audio/w${idx}_${i}.mp3')" aria-label="Replay explanation">&#128266;</button></span>${s.why[i]}`;
   const nb=document.getElementById('next');
   nb.classList.remove('hidden');
   nb.textContent = (idx===STEPS.length-1)?'See your result':'Next step';
+  playQ('audio/w'+idx+'_'+i+'.mp3');
 }
 
 function next(){ idx++; if(idx>=STEPS.length){ result(); } else { render(); } }
