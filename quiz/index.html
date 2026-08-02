@@ -80,6 +80,33 @@
   .how-title{font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--csr-fg-mute);margin-bottom:14px;}
   .how-step{display:flex;gap:12px;align-items:flex-start;margin-bottom:14px;font-size:14.5px;line-height:1.5;color:#dadada;}
   .how-num{flex:0 0 auto;width:24px;height:24px;border-radius:50%;background:var(--csr-accent);color:#fff;font-weight:800;font-size:13px;display:flex;align-items:center;justify-content:center;margin-top:1px;}
+  /* rights primer */
+  .primer{margin-top:44px;}
+  .primer .kick{color:var(--csr-accent);font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:12px;margin-bottom:10px;text-align:center;}
+  .primer h2{font-size:24px;font-weight:800;letter-spacing:-.3px;text-align:center;margin-bottom:12px;color:#fff;}
+  .primer .lede{color:var(--csr-fg-dim);font-size:15px;line-height:1.7;text-align:center;max-width:540px;margin:0 auto 26px;}
+  .primer .lede b{color:#fff;}
+  .right{background:rgba(0,0,0,0.55);border:1px solid var(--csr-border);border-left:3px solid var(--accent,var(--csr-accent));border-radius:10px;padding:20px 20px;margin-bottom:14px;text-align:left;}
+  .right .amd{display:inline-block;font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent,var(--csr-accent));border:1px solid var(--accent,var(--csr-accent));border-radius:4px;padding:3px 9px;margin-bottom:12px;}
+  .right h3{font-size:19px;font-weight:800;margin-bottom:12px;color:#fff;}
+  .right .row{margin-bottom:12px;}
+  .right .row:last-child{margin-bottom:0;}
+  .right .rl{display:block;color:var(--csr-fg-mute);font-size:10.5px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px;}
+  .right .rt{color:var(--csr-fg-dim);font-size:14.5px;line-height:1.55;}
+  .right .rt b{color:#fff;}
+  .say{display:block;background:#0a0c0a;border:1px solid var(--csr-border);border-radius:8px;padding:12px 14px;color:#fff;font-size:14.5px;font-weight:600;margin-top:4px;}
+  .r-1st{--accent:#ffd60a;} .r-5th{--accent:#FF0000;} .r-4th{--accent:#22c55e;}
+  .athome{--accent:#8b5cf6;}
+  .athome .how-num{background:var(--accent);}
+  .primer .morelink{display:block;text-align:center;margin-top:18px;color:var(--csr-fg-dim);font-size:14px;font-weight:600;text-decoration:none;}
+  .primer .morelink:hover{color:var(--csr-accent);}
+  .primer .banner{display:flex;gap:10px;align-items:flex-start;background:rgba(0,0,0,0.55);border:1px solid var(--csr-border);border-left:3px solid #ffd60a;border-radius:8px;padding:12px 14px;margin-top:20px;font-size:12.5px;color:var(--csr-fg-dim);line-height:1.5;}
+  .primer .banner b{color:#ffd60a;}
+  .listenbtn{display:inline-flex;align-items:center;gap:8px;background:transparent;border:1px solid var(--csr-border);color:var(--csr-fg);font-weight:700;font-size:14px;padding:10px 18px;border-radius:10px;cursor:pointer;font-family:inherit;transition:border-color .15s,color .15s;}
+  .listenbtn:hover{border-color:var(--csr-accent);color:var(--csr-accent);}
+  .listenbtn.playing{border-color:var(--csr-accent);color:var(--csr-accent);}
+  .listenwrap{text-align:center;margin:-8px 0 26px;}
+  .listenwrap .hint{display:block;color:var(--csr-fg-mute);font-size:12px;margin-top:8px;}
   .hidden{display:none;}
   @media(min-width:768px){.page-header h1{font-size:48px;}.card{padding:28px 26px;}}
 </style>
@@ -122,6 +149,54 @@
       <div id="result" class="hidden"></div>
     </div>
     <p class="foot" id="globalfoot">Practice trainer &mdash; not legal advice. Always stay calm and follow lawful commands.</p>
+<section class="primer">
+      <p class="kick">The rights behind it</p>
+      <h2>What these rights actually are</h2>
+      <p class="lede">Your constitutional rights are the freedoms written into the U.S. Constitution &mdash; mostly the Bill of Rights &mdash; that <b>limit what the government, including the police, can do to you</b>. Three of them do the heavy lifting at a traffic stop. Here's what each one is, and exactly how you use it.</p>
+      <div class="listenwrap">
+        <audio id="rightsAudio" src="rights-explainer.mp3" preload="none"></audio>
+        <button class="listenbtn" id="listenBtn" onclick="toggleListen()"><span id="listenIco">&#128266;</span> <span id="listenTxt">Listen</span></button>
+        <span class="hint">Prefer to listen? Hear the whole thing read aloud.</span>
+      </div>
+
+      <div class="right r-1st">
+        <span class="amd">1st Amendment</span>
+        <h3>Your right to record</h3>
+        <div class="row"><span class="rl">What it is</span><span class="rt">The 1st Amendment protects free speech and a free press. Courts have long held that <b>recording police doing their job in public</b> is part of that protection.</span></div>
+        <div class="row"><span class="rl">How you use it</span><span class="rt">Keep your phone recording from a safe spot &mdash; a pocket or a mount. You don't have to stop when you're asked, and you don't have to hand it over. Just never physically interfere with the officer.</span></div>
+      </div>
+
+      <div class="right r-5th">
+        <span class="amd">5th Amendment</span>
+        <h3>Your right to stay silent</h3>
+        <div class="row"><span class="rl">What it is</span><span class="rt">The 5th Amendment means <b>you can't be forced to say things that incriminate you</b>. Past handing over your license, registration and insurance, you don't have to answer an officer's questions.</span></div>
+        <div class="row"><span class="rl">How you use it</span><span class="rt">The moment they ask anything beyond your documents &mdash; even a friendly &ldquo;where you headed?&rdquo; &mdash; say it out loud, every time:</span></div>
+        <span class="say">&ldquo;Sorry officer, I don't answer questions without a lawyer.&rdquo;</span>
+      </div>
+
+      <div class="right r-4th">
+        <span class="amd">4th Amendment</span>
+        <h3>Your protection from searches</h3>
+        <div class="row"><span class="rl">What it is</span><span class="rt">The 4th Amendment protects you from <b>unreasonable searches</b>. Without a warrant, probable cause, or your consent, an officer generally can't search your car, your phone, or your bag.</span></div>
+        <div class="row"><span class="rl">How you use it</span><span class="rt">If they ask to search anything, decline with your words &mdash; never your body &mdash; even if they search anyway. Your clear refusal is what protects you later:</span></div>
+        <span class="say">&ldquo;Sorry officer, I do not consent to any searches.&rdquo;</span>
+      </div>
+
+      <div class="right athome">
+        <span class="amd">At your door</span>
+        <h3>It isn't just the car</h3>
+        <p class="rt" style="margin-bottom:16px">CopStop<span style="color:var(--csr-accent)">Ready</span> protects you on more than the road. The same rights follow you to your own front door &mdash; and at home your strongest protection kicks in: police generally need a <b style="color:#fff">warrant signed by a judge</b> to come inside.</p>
+        <div class="how-step"><span class="how-num">1</span><span><b style="color:#fff">Make them show the warrant.</b> You don't have to open the door &mdash; ask them to hold it to a window or slip it under, and check it names your address.</span></div>
+        <div class="how-step"><span class="how-num">2</span><span><b style="color:#fff">Don't consent.</b> &ldquo;I do not consent to a search&rdquo; works at your door just like it does in the car.</span></div>
+        <div class="how-step"><span class="how-num">3</span><span><b style="color:#fff">Stay silent.</b> You don't have to answer questions through the door &mdash; the 5th follows you home.</span></div>
+        <div class="how-step"><span class="how-num">4</span><span><b style="color:#fff">Keep recording.</b> Recording police doing their job at your home is protected too.</span></div>
+      </div>
+
+      <a class="morelink" href="/rights/">Read the full breakdown, plus what you must provide &rarr;</a>
+
+      <div class="banner"><span>&#9888;</span><div><b>General information, not legal advice.</b> Laws vary by state and every situation is different. For anything serious, consult a licensed attorney.</div></div>
+    </section>
+
     <div class="footer-nav">
       <a href="/">Home</a>
       <a href="/how-to-use/">How to Use</a>
@@ -196,6 +271,21 @@ const STEPS = [
     ]
   },
   {
+    scene:"Still the 5th",
+    q:"He softens up: \u201cNo worries. So where you headed tonight \u2014 just coming from work?\u201d",
+    correct:0,
+    opts:[
+      "\u201cSorry officer, I don't answer questions without a lawyer.\u201d \u2014 the same calm line.",
+      "Chat a little \u2014 he's being friendly, so answering can't hurt.",
+      "Get annoyed: \u201cWhy does it matter where I'm going?\u201d"
+    ],
+    why:[
+      "Here's the WHEN people miss: the 5th covers EVERY question past your documents \u2014 the friendly ones too. \u201cWhere you headed?\u201d sounds harmless, but a warm tone is still fishing. Your one line holds no matter how many times, or how kindly, they ask.",
+      "Friendly questions are still questions \u2014 and a nice tone is often exactly how more gets pulled out of you. You never have to answer beyond your documents.",
+      "You don't owe an answer, but snapping raises the temperature. Same calm line, every time \u2014 polite, never irritated."
+    ]
+  },
+  {
     scene:"Pleading the 4th",
     q:"\u201cMind if I take a quick look inside your car?\u201d",
     correct:1,
@@ -208,6 +298,36 @@ const STEPS = [
       "Saying yes gives up the 4th \u2014 a right you can't get back. Even with nothing to hide, you decline: that's exactly what it's for.",
       "This is the 4th. The moment they ask to search \u2014 that's your cue. One line puts your refusal on the record: \u201cSorry officer, I do not consent to any searches.\u201d They may search anyway on other grounds; that's fine, your words still protect you. Say no \u2014 never physically stop them.",
       "Never resist with your body \u2014 that's how someone gets hurt or arrested. Plead the 4th with words only, stay calm, and let the court sort out the rest."
+    ]
+  },
+  {
+    scene:"Still the 4th",
+    q:"\u201cYou seem nervous. If you've got nothing to hide, you won't mind if I look \u2014 right?\u201d",
+    correct:1,
+    opts:[
+      "Cave and agree \u2014 saying no would make you look guilty.",
+      "\u201cSorry officer, I do not consent to any searches.\u201d \u2014 calm, unchanged.",
+      "Argue that he has no right and that you know the law."
+    ],
+    why:[
+      "This is the trap: making you feel that saying no LOOKS guilty. It doesn't. Declining a search is your right, and a court can't treat using a right as evidence against you. \u201cNothing to hide\u201d is pressure, not law.",
+      "Exactly. The pressure changes; your answer doesn't. Refusing is never an admission \u2014 that's the whole point of the 4th. Same calm line.",
+      "You're right on the law, but lecturing escalates it. You don't have to argue or explain \u2014 just decline, calm and short, and let it stand."
+    ]
+  },
+  {
+    scene:"The 4th, still",
+    q:"\u201cThen hand me your phone, and let me see that bag on the seat.\u201d",
+    correct:0,
+    opts:[
+      "\u201cSorry officer, I do not consent to any searches.\u201d \u2014 your phone and bag included.",
+      "Hand over the phone \u2014 refusing a phone feels different.",
+      "Unlock the phone for him, just to be safe."
+    ],
+    why:[
+      "The other WHEN people miss: the 4th isn't only your car. Your phone, your bag, your pockets \u2014 you can decline a search of any of them. Your phone especially is heavily protected: police generally need a warrant to search it.",
+      "A phone is one of the MOST protected things you carry \u2014 declining it is squarely your right. Hand over your documents, never your unlocked phone.",
+      "Never unlock it for a search \u2014 that hands over everything a warrant would normally be required for. Decline the search; your documents are all you must provide."
     ]
   },
   {
@@ -299,13 +419,21 @@ function result(){
     <p class="sub" style="margin-bottom:8px">${blurb}</p>
     <div class="recap">
       <h3>Your two lines &mdash; know them cold</h3>
-      <li><b style="color:#fff">The 5th</b> &mdash; the moment they ask anything past your documents: <span style="color:#fff">&ldquo;Sorry officer, I don't answer questions without a lawyer.&rdquo;</span></li>
-      <li><b style="color:#fff">The 4th</b> &mdash; the moment they ask to search: <span style="color:#fff">&ldquo;Sorry officer, I do not consent to any searches.&rdquo;</span></li>
+      <li><b style="color:#fff">The 5th</b> &mdash; the moment they ask anything past your documents, even friendly small talk: <span style="color:#fff">&ldquo;Sorry officer, I don't answer questions without a lawyer.&rdquo;</span></li>
+      <li><b style="color:#fff">The 4th</b> &mdash; the moment they want to search anything, car, phone or bag: <span style="color:#fff">&ldquo;Sorry officer, I do not consent to any searches.&rdquo;</span></li>
       <li>Always hand over your documents and follow lawful commands. Stay calm, keep recording &mdash; comply now, contest later.</li>
     </div>
     <button class="btn" onclick="location.href='/'">Get CSR — make it second nature</button>
     <button class="btn ghost" onclick="start()">Run the stop again</button>`;
 }
 </script>
+  <script>
+    function toggleListen(){
+      var a=document.getElementById('rightsAudio'),b=document.getElementById('listenBtn'),i=document.getElementById('listenIco'),t=document.getElementById('listenTxt');
+      if(a.paused){a.play();b.classList.add('playing');i.innerHTML='&#10073;&#10073;';t.textContent='Pause';}
+      else{a.pause();b.classList.remove('playing');i.innerHTML='&#128266;';t.textContent='Listen';}
+      a.onended=function(){b.classList.remove('playing');i.innerHTML='&#128266;';t.textContent='Listen';};
+    }
+  </script>
 </body>
 </html>
