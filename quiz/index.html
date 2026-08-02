@@ -384,6 +384,7 @@ function render(){
   s.opts.forEach((o,i)=>{ html+=`<button class="opt" id="opt${i}" onclick="choose(${i})"><span class="k">${keys[i]}</span>${o}</button>`; });
   html+=`</div><div class="why" id="why"></div><button class="btn hidden" id="next" onclick="next()"></button>`;
   document.getElementById('game').innerHTML=html;
+  playQ('audio/q'+idx+'.mp3');
 }
 
 function choose(i){
