@@ -107,6 +107,9 @@
   .listenbtn.playing{border-color:var(--csr-accent);color:var(--csr-accent);}
   .listenwrap{text-align:center;margin:-8px 0 26px;}
   .listenwrap .hint{display:block;color:var(--csr-fg-mute);font-size:12px;margin-top:8px;}
+  .spk{display:inline-flex;align-items:center;justify-content:center;vertical-align:middle;background:transparent;border:1px solid var(--csr-border);border-radius:8px;width:34px;height:34px;font-size:15px;cursor:pointer;color:var(--csr-fg-dim);margin-left:6px;padding:0;line-height:1;}
+  .spk:hover{border-color:var(--csr-accent);color:var(--csr-accent);}
+  .spk:active{transform:scale(.94);}
   .hidden{display:none;}
   @media(min-width:768px){.page-header h1{font-size:48px;}.card{padding:28px 26px;}}
 </style>
@@ -145,6 +148,7 @@
       </div>
       <button class="btn" onclick="start()">Start the stop</button>
       </div>
+      <audio id="qAudio" preload="none"></audio>
       <div id="game" class="hidden"></div>
       <div id="result" class="hidden"></div>
     </div>
@@ -363,6 +367,7 @@ const STEPS = [
 ];
 
 let idx=0, score=0, answered=false;
+function playQ(src){var a=document.getElementById('qAudio');try{a.pause();a.currentTime=0;}catch(e){}a.src=src;a.play();}
 
 function start(){ idx=0; score=0; document.getElementById('intro').classList.add('hidden'); document.getElementById('result').classList.add('hidden'); document.getElementById('game').classList.remove('hidden'); render(); }
 
@@ -373,7 +378,7 @@ function render(){
   let html=`
     <div class="prog"><div class="bar"><i style="width:${pct}%"></i></div><div class="lbl">Step ${idx+1} / ${STEPS.length}</div></div>
     <div class="scene">${s.scene}</div>
-    <div class="q">${s.q}</div>
+    <div class="q">${s.q} <button type="button" class="spk" onclick="playQ('audio/q${idx}.mp3')" aria-label="Hear this question">&#128266;</button></div>
     <div id="opts">`;
   const keys=['A','B','C'];
   s.opts.forEach((o,i)=>{ html+=`<button class="opt" id="opt${i}" onclick="choose(${i})"><span class="k">${keys[i]}</span>${o}</button>`; });
