@@ -163,6 +163,26 @@
       .feature { padding: 28px 28px; }
       .feature-name { font-size: 19px; }
     }
+    .twoways { background: rgba(0,0,0,.55); border: 1px solid var(--csr-border); border-left: 3px solid #ffd60a; border-radius: 12px; padding: 22px 24px; margin: 0 auto 44px; max-width: 760px; }
+    .twoways p { color: var(--csr-fg-dim); font-size: 15.5px; line-height: 1.62; margin: 0; }
+    .twoways strong { color: var(--csr-fg); }
+    .walletbox { background: rgba(0,0,0,.55); border: 1px solid var(--csr-border); border-radius: 12px; padding: 26px 24px; margin-bottom: 16px; }
+    .walletbox.doc { border-left: 3px solid #22C55E; }
+    .walletbox.fines { border-left: 3px solid #F5A623; }
+    .walletbox h3 { font-size: 22px; font-weight: 800; letter-spacing: -0.2px; margin-bottom: 10px; }
+    .walletbox.doc h3 { color: #22C55E; }
+    .walletbox.fines h3 { color: #F5A623; }
+    .walletbox p { color: var(--csr-fg-dim); font-size: 15px; line-height: 1.62; margin: 0 0 12px; }
+    .walletbox p:last-child { margin-bottom: 0; }
+    .walletbox .lbl { color: var(--csr-fg); font-weight: 700; font-size: 12.5px; text-transform: uppercase; letter-spacing: 1.3px; margin: 20px 0 6px; }
+    .walletbox ul { list-style: none; padding: 0; margin: 0 0 12px; }
+    .walletbox li { color: var(--csr-fg-dim); font-size: 15px; line-height: 1.55; padding: 5px 0 5px 20px; position: relative; }
+    .walletbox li::before { content: "\2022"; position: absolute; left: 4px; font-weight: 700; }
+    .walletbox.doc li::before { color: #22C55E; }
+    .walletbox.fines li::before { color: #F5A623; }
+    .day-g { color: #22c55e; font-weight: 700; }
+    .day-y { color: #ffd60a; font-weight: 700; }
+    .day-r { color: var(--csr-accent); font-weight: 700; }
   </style>
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -189,6 +209,10 @@
       <p>Everything CopStop<span style="color:var(--csr-accent)">Ready</span> does for you. On your phone. No servers. No accounts. No analytics.</p>
     </div>
 
+    <div class="twoways">
+      <p><strong>CopStop<span style="color:var(--csr-accent)">Ready</span> was built to protect you two ways &mdash; and both can save you money.</strong> On the road, it puts you in control during a stop: you know your rights, you stay calm, and a routine stop stays routine instead of spiraling into charges you didn't deserve. Off the road, it guards your wallet &mdash; watching every renewal date and every car fine you owe, so a date you forgot never turns into a $50, $500, or $1,000 mistake.</p>
+    </div>
+
     <div class="shots">
       <div class="shot"><img src="/img/coach.jpg" alt="CopStopReady CSR Coach screen" width="620" height="1343"></div>
       <div class="shot"><img src="/img/live_recording.jpg" alt="Live recording script" width="560" height="1213"></div>
@@ -212,12 +236,46 @@
         <p>Every recording is stored locally on your device and PIN-locked, tagged with the <strong>date and time</strong> so you can find the one you need without scrolling through files called "audio_001.m4a". Browse, play back, and share with your lawyer.</p>
       </div>
 
-      <div class="feature">
-        <div class="feature-head">
-          <div class="feature-icon">📇</div>
-          <div class="feature-name">Doc Wallet</div>
-        </div>
-        <p>Your driver's license, registration, insurance card, and inspection sticker, stored right on your phone &mdash; no uploads, no cloud, ever. Everything sits behind your PIN (the same one that guards your Vault, encrypted in your phone's secure hardware). <strong>Renewal reminders</strong> land at 90, 60, 30, 14, 7 and 3 days before anything expires, and <strong>Renew Now</strong> jumps you straight to the official renewal page.</p>
+      <div class="walletbox doc">
+        <h3>📇 Doc Wallet</h3>
+        <p>Doc Wallet keeps your driver's license, registration, insurance card, and inspection sticker on your phone &mdash; no uploads, no cloud. It all stays on this phone, period.</p>
+        <p>Your wallet is locked behind your PIN &mdash; the same PIN that protects your Vault. Your PIN is encrypted in your phone's hardware-backed secure storage.</p>
+        <p class="lbl">How your reminders turn on</p>
+        <p>For your license, registration, and insurance, just take the picture. CSR reads the expiration date right off the doc and switches your reminders on automatically &mdash; there's nothing to type.</p>
+        <p>Your inspection sticker is the only exception. A sticker's date is too small to scan reliably, so you enter it yourself, once. The moment you save it, those reminders switch on too.</p>
+        <p class="lbl">What you get</p>
+        <ul>
+          <li>Store all four &mdash; license, registration, insurance, and inspection sticker</li>
+          <li>Color-coded expiry tracking (green / yellow / red)</li>
+          <li>Renewal reminders on every doc at <span class="day-g">90</span>, <span class="day-g">60</span>, <span class="day-y">30</span>, <span class="day-y">14</span>, <span class="day-r">7</span>, and <span class="day-r">3</span> days before each expires</li>
+          <li>Renew Now &mdash; open a saved doc and jump straight to the official renewal page (New Jersey license &amp; registration today, more states coming; insurance opens a search for your carrier).</li>
+        </ul>
+        <p>Once a doc is saved, just open Doc Wallet &mdash; each one shows a color-coded countdown of the days left before it expires.</p>
+        <p class="lbl">The future of your documents</p>
+        <p>CopStop<span style="color:var(--csr-accent)">Ready</span> is built privacy-first &mdash; nothing you save ever leaves your phone. Doc Wallet puts your license, registration, insurance, and inspection right in your pocket, always ready.</p>
+        <p class="lbl">More money in your wallet</p>
+        <p>Doc Wallet watches every expiration date and warns you long before anything lapses &mdash; so a late fee or expired tags never catch you off guard again.</p>
+        <p class="lbl">Legal in New Jersey</p>
+        <p>You can already show your registration and insurance straight from your phone, and a digital driver's license is on the way. Doc Wallet keeps all of it ready.</p>
+        <p class="lbl">Privacy when it counts</p>
+        <p>Get pulled over, tap Show Officer Docs, and the app instantly records audio and front-camera video while locking down to your documents only. Anyone who tries to snoop deeper hits your PIN. It protects you, it protects them &mdash; and none of it ever leaves your phone.</p>
+      </div>
+
+      <div class="walletbox fines">
+        <h3>🎟️ Fines Wallet</h3>
+        <p>Fines Wallet keeps every car fine, ticket, and bill with a due date right here on your phone &mdash; a tow bill, an E-ZPass violation, a parking or traffic ticket, a red-light or speed-camera notice, a toll. Anything car-related you have to pay by a date.</p>
+        <p class="lbl">100% private</p>
+        <p>Nothing leaves this phone. No servers, no analytics, no telemetry. No account, no sign-up, nothing uploaded &mdash; your fines live on this phone and nowhere else.</p>
+        <p class="lbl">How it works</p>
+        <p>Snap a photo of the fine (optional), type the pay-by date, and hit Save. Your reminders switch on automatically &mdash; there is nothing else to set up.</p>
+        <p class="lbl">Your reminders</p>
+        <p>CopStop<span style="color:var(--csr-accent)">Ready</span> reminds you at <span class="day-g">60</span>, <span class="day-g">30</span>, <span class="day-y">14</span>, <span class="day-y">7</span>, <span class="day-r">3</span>, and <span class="day-r">1</span> days before it's due, and again the day it's due. Some fines aren't dated a full 60 days out &mdash; and that's built in: your reminders adjust to each due date automatically, sending only the alerts that still fit the window. So you're always warned in time, no matter how short the notice. Mark a fine Paid and its reminders stop.</p>
+        <p class="lbl">Color-coded countdown</p>
+        <p>Each fine shows the days left before it is due &mdash; green when you have time, yellow as it nears, red when it is almost due or past.</p>
+        <p class="lbl">Keep the proof</p>
+        <p>The photo you snap is your proof you had the fine and when it was due &mdash; handy if a payment is ever disputed.</p>
+        <p class="lbl">More money in your wallet</p>
+        <p>Miss a due date and a fine can snowball into late fees, penalties, even a suspended license. Fines Wallet keeps you one step ahead of every deadline.</p>
       </div>
 
       <div class="feature">
