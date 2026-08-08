@@ -186,6 +186,49 @@
     .day-g { color: #22c55e; font-weight: 700; }
     .day-y { color: #ffd60a; font-weight: 700; }
     .day-r { color: var(--csr-accent); font-weight: 700; }
+    /* NJ Ticket Fines — interactive true-cost calculator */
+    .njf-open { display:inline-flex; align-items:center; gap:8px; margin-top:16px; background:var(--csr-accent); color:#fff; font-weight:800; font-size:15px; border:0; border-radius:11px; padding:13px 20px; cursor:pointer; }
+    .njf-open:hover { box-shadow:0 10px 30px rgba(255,0,0,.35); transform:translateY(-1px); }
+    .njf-overlay { position:fixed; inset:0; z-index:1000; background:rgba(0,0,0,.85); overflow-y:auto; display:none; padding:24px 14px 60px; }
+    .njf-overlay.open { display:block; }
+    .njf-sheet { max-width:640px; margin:0 auto; background:#0a0c0a; border:1px solid #232a23; border-radius:16px; padding:20px 18px 26px; }
+    .njf-x { float:right; background:none; border:1px solid #333; color:#bbb; border-radius:8px; width:34px; height:34px; font-size:18px; cursor:pointer; }
+    .njf-h { font-size:22px; font-weight:900; color:var(--csr-accent); margin:2px 0 8px; }
+    .njf-stripe { height:7px; border-radius:4px; background:linear-gradient(90deg,#22c55e,#ffd60a,#FF0000); margin:8px 0 14px; }
+    .njf-disc { color:#9aa39a; font-size:12.5px; line-height:1.5; margin-bottom:14px; }
+    .njf-legend { display:flex; gap:16px; margin-bottom:18px; flex-wrap:wrap; }
+    .njf-leg { display:flex; align-items:center; gap:7px; color:#9aa39a; font-size:12.5px; }
+    .njf-dot { width:10px; height:10px; border-radius:50%; }
+    .njf-sec { margin-bottom:18px; }
+    .njf-sec-h { font-size:13px; font-weight:800; letter-spacing:1px; color:#fff; background:rgba(34,197,94,.10); border:1px solid rgba(34,197,94,.3); border-radius:8px; padding:8px 12px; margin-bottom:8px; }
+    .njf-row { width:100%; text-align:left; border:0; border-left:3px solid #22c55e; border-radius:8px; padding:12px 14px; margin-bottom:8px; cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:10px; }
+    .njf-row .lbl { color:#fff; font-size:15px; font-weight:600; display:block; }
+    .njf-row .sub { color:#8a938a; font-size:12px; display:block; margin-top:2px; }
+    .njf-row .cta { color:#22c55e; font-size:11.5px; margin-top:5px; font-weight:700; display:block; }
+    .njf-row .price { font-size:17px; font-weight:800; white-space:nowrap; display:block; text-align:right; }
+    .njf-row .pts { font-size:11.5px; margin-top:2px; display:block; text-align:right; }
+    .njf-note { color:#8a938a; font-size:12px; line-height:1.5; margin:2px 2px 4px; }
+    .njf-calc { position:fixed; inset:0; z-index:1001; background:rgba(0,0,0,.8); display:none; align-items:center; justify-content:center; padding:18px; }
+    .njf-calc.open { display:flex; }
+    .njf-card { width:100%; max-width:400px; background:#0a0a0a; border:2px solid var(--csr-accent); border-radius:16px; padding:22px 20px; box-shadow:0 0 30px rgba(255,0,0,.25); }
+    .njf-card .t { font-size:20px; font-weight:900; color:#fff; }
+    .njf-card .c { font-size:13px; color:#9aa39a; margin:2px 0 14px; }
+    .njf-mline { display:flex; justify-content:space-between; align-items:center; border-top:1px solid #222; border-bottom:1px solid #222; padding:10px 0; margin-bottom:14px; }
+    .njf-mline .k { color:#22c55e; font-weight:700; font-size:14px; }
+    .njf-mline .v { color:#22c55e; font-weight:800; font-size:18px; }
+    .njf-il { color:#9aa39a; font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:1px; margin-bottom:6px; }
+    .njf-inrow { display:flex; align-items:center; gap:8px; border:1px solid #444; border-radius:10px; padding:10px 12px; margin-bottom:14px; }
+    .njf-inrow .d { color:#9aa39a; font-size:16px; }
+    .njf-inrow input { flex:1; background:none; border:0; outline:none; color:#fff; font-size:18px; font-weight:700; min-width:0; }
+    .njf-btn { width:100%; border:1px solid #22c55e; background:rgba(34,197,94,.06); color:#22c55e; font-weight:800; font-size:14px; letter-spacing:.5px; border-radius:11px; padding:13px; cursor:pointer; }
+    .njf-reveal { text-align:center; padding:6px 0 2px; }
+    .njf-reveal .rl { color:#9aa39a; font-size:12px; font-weight:700; letter-spacing:1.5px; }
+    .njf-reveal .rn { color:#22c55e; font-weight:900; font-size:34px; margin-top:4px; }
+    .njf-court { color:var(--csr-accent); font-size:14px; line-height:1.5; font-weight:600; margin-bottom:6px; }
+    .njf-mnote { color:#8a938a; font-size:12px; margin-top:12px; }
+    .njf-appnote { color:#9aa39a; font-size:12.5px; margin-top:12px; border-top:1px solid #222; padding-top:12px; }
+    .njf-appnote b { color:#fff; }
+    .njf-close2 { width:100%; margin-top:12px; border:1px solid var(--csr-accent); background:none; color:var(--csr-accent); font-weight:800; border-radius:11px; padding:11px; cursor:pointer; }
   </style>
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -285,6 +328,7 @@
       <div class="walletbox njfines">
         <h3>⚖️ NJ Ticket Fines</h3>
         <p>Got a New Jersey ticket and want to know what it&rsquo;ll really cost? The Fines screen breaks down speeding, moving violations, and document &amp; serious offenses &mdash; each with an estimate and a true-cost calculator that adds it all up.</p>
+        <button type="button" class="njf-open" onclick="njfOpen()">Open the true-cost calculator &rarr;</button>
         <p class="lbl">Estimates only</p>
         <p>Every price shown is an estimate. Most payable tickets add about $33 in court costs, and points on your license can raise your insurance for years. Amounts vary by court and can change.</p>
         <p class="lbl">What the colors mean</p>
@@ -302,6 +346,128 @@
         <p class="lbl">Private by design</p>
         <p>It&rsquo;s 2026, and barely a week goes by without another company getting hacked and people&rsquo;s private information stolen. CopStop<span style="color:var(--csr-accent)">Ready</span> was built the opposite way &mdash; no servers, no cloud, no account. Your documents, recordings, and fines never leave your phone, so there&rsquo;s simply nothing for anyone to steal &mdash; which is more than almost any app on your phone can say. This is a privacy-first safety app, and it was coded like one from the ground up: your business stays yours, and yours alone.</p>
       </div>
+
+  <div class="njf-overlay" id="njf-overlay" role="dialog" aria-modal="true" aria-label="NJ Ticket Fines calculator">
+    <div class="njf-sheet">
+      <button class="njf-x" onclick="njfClose()" aria-label="Close">&times;</button>
+      <div class="njf-h">NJ Ticket Fines</div>
+      <div class="njf-stripe"></div>
+      <div class="njf-disc">Estimates only &mdash; every payable ticket adds about $33 in court costs, and points can raise your insurance for years. Amounts vary by court and can change.</div>
+      <div class="njf-legend">
+        <span class="njf-leg"><span class="njf-dot" style="background:#22c55e"></span>0 points</span>
+        <span class="njf-leg"><span class="njf-dot" style="background:#ffd60a"></span>2&ndash;3 points</span>
+        <span class="njf-leg"><span class="njf-dot" style="background:#FF0000"></span>4+ points</span>
+      </div>
+      <div id="njf-list"></div>
+    </div>
+  </div>
+  <div class="njf-calc" id="njf-calc"><div class="njf-card" id="njf-card"></div></div>
+  <script>
+  (function(){
+    var GREEN="#22c55e", YELLOW="#ffd60a", RED="#FF0000", COURT=33, LO=0.15, HI=0.40, spinTimer=null;
+    var SPEEDING=[
+      {label:"1–9 mph over",fineLo:85,fineHi:85,points:2},
+      {label:"10–14 mph over",fineLo:95,fineHi:95,points:2},
+      {label:"15–19 mph over",fineLo:105,fineHi:180,points:4},
+      {label:"20–24 mph over",fineLo:200,fineHi:200,points:4},
+      {label:"25–29 mph over",fineLo:220,fineHi:220,points:4},
+      {label:"30–34 mph over",fineLo:240,fineHi:240,points:5},
+      {label:"35+ mph over",fineLo:260,fineHi:260,points:5}
+    ];
+    var MOVING=[
+      {label:"Careless driving",sub:"39:4-97",fineLo:85,fineHi:85,points:2},
+      {label:"Reckless driving",sub:"39:4-96",fineLo:0,fineHi:0,points:5,court:true},
+      {label:"Tailgating",sub:"39:4-89",fineLo:85,fineHi:85,points:5},
+      {label:"Stop sign",sub:"39:4-144",fineLo:85,fineHi:85,points:2},
+      {label:"Red light / signal",sub:"39:4-81",fineLo:85,fineHi:85,points:2},
+      {label:"Failure to yield",sub:"39:4-90",fineLo:85,fineHi:85,points:2},
+      {label:"Unsafe lane change",sub:"39:4-88",fineLo:85,fineHi:85,points:3},
+      {label:"Improper passing",sub:"39:4-85",fineLo:85,fineHi:85,points:4},
+      {label:"Improper turn",sub:"39:4-123",fineLo:85,fineHi:85,points:3},
+      {label:"Cell phone / handheld",sub:"39:4-97.3",fineLo:200,fineHi:400,points:0}
+    ];
+    var DOCS=[
+      {label:"Seatbelt",sub:"39:3-76.2f",fineLo:46,fineHi:46,points:0},
+      {label:"Child restraint",sub:"39:3-76.2a",fineLo:54,fineHi:54,points:0},
+      {label:"Unregistered vehicle",sub:"39:3-4",fineLo:54,fineHi:54,points:0},
+      {label:"Expired license",sub:"39:3-10",fineLo:54,fineHi:54,points:0},
+      {label:"No docs on hand",sub:"39:3-29",fineLo:180,fineHi:180,points:0},
+      {label:"No insurance (1st)",sub:"39:6B-2",fineLo:0,fineHi:0,points:0,court:true},
+      {label:"Driving suspended",sub:"39:3-40",fineLo:0,fineHi:0,points:0,court:true}
+    ];
+    var SECTIONS=[
+      {title:"SPEEDING (39:4-98)",cat:"Speeding",rows:SPEEDING,note:"True 3-yr cost = fine + ~$33 court + estimated insurance spike (based on $1,200/yr, +15–40%; varies by insurer). Speeding fines double in school &amp; construction zones."},
+      {title:"MOVING VIOLATIONS",cat:"Moving violation",rows:MOVING,note:"Cell phone: no points on a 1st or 2nd offense; 3 points on a 3rd within 10 years."},
+      {title:"DOCUMENTS &amp; SERIOUS",cat:"Document / serious",rows:DOCS,note:""}
+    ];
+    function money(n){ return "$"+Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g,","); }
+    function priceStr(lo,hi){ return lo===hi?money(lo):money(lo)+"–"+money(hi); }
+    function band(r){ return (r.court||r.points>=4)?"red":r.points>=2?"yellow":"green"; }
+    function bandColor(b){ return b==="red"?RED:b==="yellow"?YELLOW:GREEN; }
+    function bandBg(b){ return b==="red"?"rgba(255,0,0,.08)":b==="yellow"?"rgba(255,214,10,.10)":"rgba(34,197,94,.08)"; }
+    function esc(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;"); }
+    function buildList(){
+      var html="";
+      SECTIONS.forEach(function(sec,si){
+        html+='<div class="njf-sec"><div class="njf-sec-h">'+sec.title+'</div>';
+        sec.rows.forEach(function(r,ri){
+          var b=band(r), col=bandColor(b), hp=r.points>0;
+          var price=r.court?"Court":priceStr(r.fineLo,r.fineHi);
+          var pcol=r.court?RED:GREEN;
+          var pts=hp?(r.points+" pts"):(r.court?"serious":"no points");
+          var cta=r.court?"👉 Tap for details":"👉 Tap for true cost";
+          html+='<button type="button" class="njf-row" style="border-left-color:'+col+';background:'+bandBg(b)+'" onclick="njfCalc('+si+','+ri+')">'
+            +'<span><span class="lbl">'+esc(r.label)+'</span>'+(r.sub?'<span class="sub">'+esc(r.sub)+'</span>':'')+'<span class="cta">'+cta+'</span></span>'
+            +'<span><span class="price" style="color:'+pcol+'">'+price+'</span><span class="pts" style="color:'+(r.court?RED:"#8a938a")+'">'+pts+'</span></span>'
+            +'</button>';
+        });
+        if(sec.note) html+='<div class="njf-note">'+sec.note+'</div>';
+        html+='</div>';
+      });
+      document.getElementById("njf-list").innerHTML=html;
+    }
+    window.njfOpen=function(){ buildList(); document.getElementById("njf-overlay").classList.add("open"); document.body.style.overflow="hidden"; };
+    window.njfClose=function(){ document.getElementById("njf-overlay").classList.remove("open"); njfCalcClose(); document.body.style.overflow=""; };
+    window.njfCalcClose=function(){ if(spinTimer){clearInterval(spinTimer);spinTimer=null;} document.getElementById("njf-calc").classList.remove("open"); };
+    window.njfCalc=function(si,ri){
+      var r=SECTIONS[si].rows[ri], cat=SECTIONS[si].cat, hp=r.points>0;
+      var card=document.getElementById("njf-card");
+      var head='<div class="t">'+esc(r.label)+'</div><div class="c">'+cat+(hp?"  ·  "+r.points+" points":"")+'</div>';
+      if(r.court){
+        card.innerHTML=head
+          +'<div class="njf-court">Court appearance required &mdash; no set fine. Penalties can run $500&ndash;$1,000+, plus possible license loss or jail.</div>'
+          +'<div class="njf-appnote">In the app, tap <b>+ Add a fine</b> to save it and get reminders.</div>'
+          +'<button class="njf-close2" onclick="njfCalcClose()">Close</button>';
+        document.getElementById("njf-calc").classList.add("open"); return;
+      }
+      card.innerHTML=head
+        +'<div class="njf-mline"><span class="k">Ticket price</span><span class="v">'+priceStr(r.fineLo,r.fineHi)+'</span></div>'
+        +'<div class="njf-il">Your insurance / year</div>'
+        +'<div class="njf-inrow"><span class="d">$</span><input id="njf-prem" inputmode="numeric" placeholder="e.g. 1800"></div>'
+        +'<div id="njf-out"></div>'
+        +'<div class="njf-mnote">Estimate &mdash; insurance +15&ndash;40%/yr for 3 yrs, varies by insurer.</div>'
+        +'<div class="njf-appnote">In the app, tap <b>+ Add a fine</b> to save this and get reminders (60/30/14/7/3/1 + day-of).</div>'
+        +'<button class="njf-close2" onclick="njfCalcClose()">Close</button>';
+      var out=document.getElementById("njf-out");
+      function renderIdle(){ out.innerHTML='<button type="button" class="njf-btn" id="njf-go">CALCULATE TRUE COST ESTIMATE</button>'; document.getElementById("njf-go").onclick=go; }
+      renderIdle();
+      document.getElementById("njf-prem").addEventListener("input", function(){ if(spinTimer){clearInterval(spinTimer);spinTimer=null;} renderIdle(); });
+      function go(){
+        var prem=Math.max(0, parseInt((document.getElementById("njf-prem").value||"").replace(/[^0-9]/g,""),10)||0);
+        var payLo=r.fineLo+COURT, payHi=r.fineHi+COURT;
+        var insLo=hp?prem*LO*3:0, insHi=hp?prem*HI*3:0;
+        var trueLo=payLo+insLo, trueHi=payHi+insHi;
+        out.innerHTML='<div class="njf-reveal"><div class="rl">TRUE 3-YEAR COST</div><div class="rn" id="njf-rn">'+money(trueLo)+'</div></div>';
+        var rn=document.getElementById("njf-rn"), span=Math.max(1,trueHi-trueLo), ticks=0;
+        if(spinTimer)clearInterval(spinTimer);
+        spinTimer=setInterval(function(){ ticks++; rn.textContent=money(Math.floor(trueLo+Math.random()*span)); if(ticks>=18){clearInterval(spinTimer);spinTimer=null; rn.textContent="~"+priceStr(trueLo,trueHi);} },55);
+      }
+      document.getElementById("njf-calc").classList.add("open");
+    };
+    document.getElementById("njf-overlay").addEventListener("click",function(e){ if(e.target===this) njfClose(); });
+    document.getElementById("njf-calc").addEventListener("click",function(e){ if(e.target===this) njfCalcClose(); });
+  })();
+  </script>
 
       <div class="feature">
         <div class="feature-head">
