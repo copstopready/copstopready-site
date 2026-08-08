@@ -180,6 +180,9 @@
     .walletbox li::before { content: "\2022"; position: absolute; left: 4px; font-weight: 700; }
     .walletbox.doc li::before { color: #22C55E; }
     .walletbox.fines li::before { color: #F5A623; }
+    .walletbox.njfines { border-left: 3px solid var(--csr-accent); }
+    .walletbox.njfines h3 { color: var(--csr-accent); }
+    .walletbox.njfines li::before { color: var(--csr-accent); }
     .day-g { color: #22c55e; font-weight: 700; }
     .day-y { color: #ffd60a; font-weight: 700; }
     .day-r { color: var(--csr-accent); font-weight: 700; }
@@ -277,6 +280,27 @@
         <p>The photo you snap is your proof you had the fine and when it was due &mdash; handy if a payment is ever disputed.</p>
         <p class="lbl">More money in your wallet</p>
         <p>Miss a due date and a fine can snowball into late fees, penalties, even a suspended license. Fines Wallet keeps you one step ahead of every deadline.</p>
+      </div>
+
+      <div class="walletbox njfines">
+        <h3>⚖️ NJ Ticket Fines</h3>
+        <p>Got a New Jersey ticket and want to know what it&rsquo;ll really cost? The Fines screen breaks down speeding, moving violations, and document &amp; serious offenses &mdash; each with an estimate and a true-cost calculator that adds it all up.</p>
+        <p class="lbl">Estimates only</p>
+        <p>Every price shown is an estimate. Most payable tickets add about $33 in court costs, and points on your license can raise your insurance for years. Amounts vary by court and can change.</p>
+        <p class="lbl">What the colors mean</p>
+        <ul>
+          <li><span class="day-g">Green</span> &mdash; no points, so no insurance spike. A no-point downgrade can still carry a higher fine.</li>
+          <li><span class="day-y">Yellow</span> &mdash; two or three points, and your insurance starts to climb.</li>
+          <li><span class="day-r">Red</span> &mdash; four or more points, maybe a court appearance. The most expensive kind.</li>
+        </ul>
+        <p class="lbl">See a ticket&rsquo;s true cost</p>
+        <p>Tap any fine to open its breakdown. Enter your yearly insurance rate and CopStop<span style="color:var(--csr-accent)">Ready</span> estimates the real damage &mdash; the fine, about $33 in court costs, and the insurance increase over three years. Court-level tickets show the details to expect instead.</p>
+        <p class="lbl">Log a ticket you got</p>
+        <p>Get a ticket or fine with a due date? Tap Add a Fine, snap a picture, add the due date, and tap Save. Done.</p>
+        <p class="lbl">Reminders switch on automatically &mdash; no setup</p>
+        <p>CopStop<span style="color:var(--csr-accent)">Ready</span> alerts you at <span class="day-g">60</span>, <span class="day-y">30</span>, <span class="day-y">14</span>, <span class="day-r">7</span>, <span class="day-r">3</span>, and <span class="day-r">1</span> days before it&rsquo;s due, and again the day it&rsquo;s due &mdash; with a siren alert you can&rsquo;t miss. So a $50 slip never snowballs into a $1,000 one.</p>
+        <p class="lbl">Private by design</p>
+        <p>It&rsquo;s 2026, and barely a week goes by without another company getting hacked and people&rsquo;s private information stolen. CopStop<span style="color:var(--csr-accent)">Ready</span> was built the opposite way &mdash; no servers, no cloud, no account. Your documents, recordings, and fines never leave your phone, so there&rsquo;s simply nothing for anyone to steal &mdash; which is more than almost any app on your phone can say. This is a privacy-first safety app, and it was coded like one from the ground up: your business stays yours, and yours alone.</p>
       </div>
 
       <div class="feature">
