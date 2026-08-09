@@ -367,7 +367,7 @@ const STEPS = [
 ];
 
 let idx=0, score=0, answered=false;
-function playQ(src){var a=document.getElementById('qAudio');try{a.pause();a.currentTime=0;}catch(e){}a.src=src;a.play();}
+function playQ(src){var a=document.getElementById('qAudio');try{a.pause();a.currentTime=0;}catch(e){}a.src=src+(src.indexOf('?')<0?'?':'&')+'v=2';a.play();}
 
 function start(){ idx=0; score=0; document.getElementById('intro').classList.add('hidden'); document.getElementById('result').classList.add('hidden'); document.getElementById('game').classList.remove('hidden'); render(); }
 
