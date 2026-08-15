@@ -134,6 +134,10 @@
       padding: 3px 8px;
       margin-bottom: 12px;
     }
+    .tf-callout { margin-top: 20px; padding-top: 18px; border-top: 1px dashed rgba(255,255,255,.14); }
+    .tf-callout .coming-pill { margin-bottom: 10px; }
+    .tf-callout p { color: var(--csr-fg-dim); font-size: 14px; line-height: 1.55; margin: 0; }
+    .tf-callout strong { color: var(--csr-fg); }
     .deep-dive {
       margin-top: 64px;
       padding: 32px 26px;
@@ -262,7 +266,7 @@
   <main>
     <div class="page-header">
       <h1><span class="accent">PRICING</span></h1>
-      <p>Right now, everything in CopStop<span style="color:var(--csr-accent)">Ready</span> is free. When billing turns on, it's $1.99/mo or $19.99/yr (2 months free) &mdash; until then, it's all free.</p>
+      <p>Right now, every feature in CopStop<span style="color:var(--csr-accent)">Ready</span> is free &mdash; for a limited time the whole app is unlocked, with no account and no card. The prices below are only what's planned for a future update.</p>
       <p class="privacy-lead">Over <b>500 hours</b> went into this &mdash; from the first design sketch to the far harder part: making every last feature run <span class="g">100% on your phone</span>. No account. No servers. No prying eyes. That's what makes CopStop<span style="color:var(--csr-accent)">Ready</span> genuinely rare &mdash; because it's the hardest kind to build. It's a privacy-first app that walks you through a traffic stop like a <b>seasoned pro</b>, telling you exactly what to say and do in the moment, while your recordings, documents and data never leave your device. There's no account, so we couldn't see what's on your phone even if we tried. That was never a shortcut &mdash; it's the whole point.</p>
     </div>
 
@@ -272,7 +276,7 @@
         <div class="tier-label">Free Today</div>
         <div class="tier-name">The Whole App</div>
         <div class="tier-price">$0</div>
-        <div class="tier-subtitle">No account. Everything below is free right now.</div>
+        <div class="tier-subtitle">No account, no card. For a limited time, everything below is unlocked free.</div>
         <ul>
           <li>Audio recording saved to your on-device Vault (with GPS coordinates in local metadata)</li>
           <li>Vault &mdash; unlimited local recording storage</li>
@@ -282,34 +286,38 @@
           <li>4-digit PIN lock on Vault and Wallet</li>
           <li>Tactical dark theme with brightness toggle</li>
         </ul>
+        <div class="tf-callout">
+          <div class="coming-pill">Ticket Fighter &middot; releasing soon</div>
+          <p><strong>Fight the ticket, not just the stop.</strong> Scan a ticket and CopStop<span style="color:var(--csr-accent)">Ready</span> hunts for the flaws that get tickets tossed &mdash; a beatability score, contradictions, evidentiary gaps, and a court-ready letter you can print or share. It's built and ready; we're rolling it out to early users first &mdash; free while we're in early launch.</p>
+        </div>
       </div>
 
       <div class="tier tier-soon">
-        <div class="coming-pill">Free while testing</div>
+        <div class="coming-pill">Free right now</div>
         <div class="tier-label">Single User</div>
         <div class="tier-name">Renewal Reminders</div>
-        <div class="tier-price">$1.99<span class="per">/ month</span></div>
-        <div style="color:var(--csr-fg-dim);font-size:14px;margin:4px 0 0;font-weight:600;">or $19.99/year &mdash; 2 months free</div>
-        <div class="tier-subtitle">Every car deadline in one place &mdash; renewal docs and fines alike. Free while testing; when billing turns on, the free plan tracks a single item and this unlocks them all for $1.99/mo.</div>
+        <div class="tier-price">$0.00<span class="per">/ month</span></div>
+        <div style="color:var(--csr-fg-dim);font-size:14px;margin:4px 0 0;font-weight:600;">Regular $1.99/mo or $19.99/yr &mdash; planned for a future update</div>
+        <div class="tier-subtitle">Every deadline in one place &mdash; renewals and any bill with a due date. Free right now for a limited time; the price above is only what's planned later.</div>
         <ul>
-          <li>Renewal reminders for all four docs &mdash; license, registration, insurance and inspection</li>
-          <li>Fines Wallet: parking &amp; traffic tickets, tow and impound bills, red-light and speed-camera notices, toll violations &mdash; any car fine with a due date</li>
-          <li>Renewals warn at 90, 60, 30, 14, 7 and 3 days; fines count down 60, 30, 14, 7, 3, 1 and the day it's due</li>
-          <li>Never miss a renewal or a due date again</li>
+          <li>Renewal reminders on all four docs &mdash; license, registration, insurance and inspection</li>
+          <li><strong>Save literally any bill</strong> with a due date &mdash; tickets, tow and impound bills, red-light, speed-camera and toll notices, plus utility, phone or credit-card bills. Unlimited, no category limits.</li>
+          <li>Snap a pic, type the due date, save &mdash; reminders start automatically, nothing else to set up</li>
+          <li>Renewals warn at 90, 60, 30, 14, 7 and 3 days; bills count down 60, 30, 14, 7, 3, 1 and the day they're due</li>
         </ul>
       </div>
 
       <div class="tier tier-soon">
-        <div class="coming-pill">Free while testing</div>
+        <div class="coming-pill">Free right now</div>
         <div class="tier-label">Family Plan</div>
         <div class="tier-name">Family 5-Pack</div>
-        <div class="tier-price">$4.99<span class="per">/ month</span></div>
-        <div style="color:var(--csr-fg-dim);font-size:14px;margin:4px 0 0;font-weight:600;">or $49.99/year &mdash; 2 months free</div>
+        <div class="tier-price">$0.00<span class="per">/ month</span></div>
+        <div style="color:var(--csr-fg-dim);font-size:14px;margin:4px 0 0;font-weight:600;">Regular $4.99/mo or $49.99/yr &mdash; planned for a future update</div>
         <div class="tier-subtitle">Cover a whole family &mdash; five people, up to twenty documents &mdash; for less than the price of a sandwich. Nobody checks a renewal date, and nobody eats a late fee for forgetting.</div>
         <ul>
           <li>Up to 5 people, 20 documents in one plan</li>
-          <li>Renewals &amp; the Fines Wallet for everyone &mdash; tickets, tow bills, camera and toll notices</li>
-          <li>Automatic reminders on every renewal and every due date</li>
+          <li>Save any bill for the whole household &mdash; renewals, tickets, tow bills, camera and toll notices, utilities, anything with a due date</li>
+          <li>Automatic reminders on every renewal and every due date &mdash; unlimited bills, no setup</li>
           <li>No missed dates, no late fees &mdash; for the whole household</li>
         </ul>
       </div>
