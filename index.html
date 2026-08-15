@@ -151,6 +151,10 @@
     .plan li { color: #cdd3cd; font-size: 14.5px; padding: 5px 0 5px 22px; position: relative; }
     .plan li::before { content: "✓"; color: #22c55e; position: absolute; left: 0; font-weight: 700; }
 
+    .plan .tf { margin-top: 18px; padding-top: 16px; border-top: 1px dashed rgba(255,255,255,.14); }
+    .plan .tf-tag { font-size: 12px; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; color: var(--csr-accent); margin: 0 0 6px; }
+    .plan .tf-body { color: #cdd3cd; font-size: 13.5px; line-height: 1.55; margin: 0; }
+    .plan .tf-body b { color: #fff; }
     /* FINAL CTA */
     .final { text-align: center; padding: 60px 0; }
     .final h2 { font-size: clamp(27px,4vw,42px); font-weight: 900; margin: 0 0 10px; }
@@ -317,23 +321,28 @@
       <p class="kicker">Pricing</p>
       <h2>Honest and simple.</h2>
       <p class="pricelead">Over <b>500 hours</b> went into this &mdash; from the first design sketch to the far harder part: making every last feature run <span class="g">100% on your phone</span>. No account. No servers. No prying eyes. That's what makes CopStop<span style="color:var(--csr-accent)">Ready</span> genuinely rare &mdash; because it's the hardest kind to build. It walks you through a traffic stop two simple ways: read the Traffic Stop Coach, or hit the green 5th button right on your home screen &mdash; two minutes, tops, and your next stop you'll handle like a <b>seasoned pro</b>. And when it counts, it keeps recording even with your screen off &mdash; and even after you swipe the app closed, or someone else does. CSR keeps rolling. Few apps can say that. Your recordings, documents and data never leave your device. There's no account, so we couldn't see what's on your phone even if we tried. That was never a shortcut &mdash; it's the whole point. Privacy first.</p>
-      <div class="pricebar"><b>Free while we're in testing.</b>&nbsp; Billing isn't live yet &mdash; the prices below are what's planned for a future update.</div>
+      <div class="pricebar"><b>Everything's free right now.</b>&nbsp; For a limited time, every feature is unlocked free &mdash; no account, no card, nothing to enter. The prices below are only what's planned for a future update.</div>
       <div class="plans">
-        <div class="plan">
+        <div class="plan hi">
           <p class="pt">Start here</p>
           <p class="price">Free</p>
-          <p class="free-now g">Available now</p>
+          <p class="free-now g">Everything unlocked &middot; limited time</p>
           <ul>
             <li>Record stops to the on-device Vault</li>
             <li>CSR Coach &mdash; learn the stop before it happens</li>
+            <li>Doc Wallet &mdash; your documents, always on your phone</li>
             <li>Rights Booklet &amp; Book of Secrets</li>
           </ul>
+          <div class="tf">
+            <p class="tf-tag">&#9889; Ticket Fighter &middot; releasing soon</p>
+            <p class="tf-body"><b>Fight the ticket, not just the stop.</b> Scan a ticket and CopStop<span style="color:var(--csr-accent)">Ready</span> hunts for the flaws that get tickets tossed &mdash; a beatability score, contradictions, evidentiary gaps, and a court-ready letter you can print or share. It's built and ready; we're rolling it out to early users first &mdash; free while we're in early launch.</p>
+          </div>
         </div>
         <div class="plan">
           <p class="pt">Renewal Reminders</p>
           <p class="price">$1.99 <small>/ month</small></p>
           <p style="color:var(--csr-fg-dim);font-size:13px;margin:3px 0 0;">or $19.99/year &mdash; 2 months free</p>
-          <p class="free-now">Free for now &middot; coming in a future update</p>
+          <p class="free-now g">Free right now &middot; planned for a future update</p>
           <ul>
             <li>Renewal alerts for all four docs &mdash; license, reg, insurance &amp; inspection (free tracks one)</li>
             <li>Fines Wallet too: parking &amp; traffic tickets, tow bills, red-light, camera &amp; toll notices</li>
@@ -345,7 +354,7 @@
           <p class="pt">Family 5-Pack</p>
           <p class="price">$4.99 <small>/ month</small></p>
           <p style="color:var(--csr-fg-dim);font-size:13px;margin:3px 0 0;">or $49.99/year &mdash; 2 months free</p>
-          <p class="free-now">Free for now &middot; coming in a future update</p>
+          <p class="free-now g">Free right now &middot; planned for a future update</p>
           <p class="plan-lead">Cover a whole family &mdash; five people, up to twenty documents &mdash; for less than the price of a sandwich. Nobody's checking renewal dates, and nobody's eating a late fee for forgetting.</p>
           <ul>
             <li>Up to 5 people &middot; 20 documents</li>
